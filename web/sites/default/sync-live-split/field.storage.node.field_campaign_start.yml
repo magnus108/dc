@@ -1,0 +1,21 @@
+uuid: 5ab0e1a5-be1c-49aa-a1f6-1414c12da4c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - uc_product
+_core:
+  default_config_hash: 1uu_RpFlZEXxnZx0aZpP9Gpf6zxCl7Vm8HxzZ3TxMBk
+id: node.field_campaign_start
+field_name: field_campaign_start
+entity_type: node
+type: uc_price
+settings: {  }
+module: uc_product
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

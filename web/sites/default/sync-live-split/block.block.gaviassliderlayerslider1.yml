@@ -1,0 +1,30 @@
+uuid: c2aeeb84-b1f7-425c-83f1-bf69a6c82efa
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_visibility_groups
+    - gavias_sliderlayer
+    - gaviasthemer
+  theme:
+    - gavias_charityplus
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: gaviassliderlayerslider1
+theme: gavias_charityplus
+region: '-1'
+weight: 0
+provider: null
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
+settings:
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
+  label: 'Gavias SliderLayer - Slider #1'
+  provider: gavias_sliderlayer
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

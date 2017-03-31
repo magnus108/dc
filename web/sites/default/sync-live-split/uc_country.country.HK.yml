@@ -1,0 +1,19 @@
+uuid: 9aa555f1-96fe-434e-b2f7-f6d4d078958e
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: hY31SXyifJRNBwkVUMr_8Pp00sihb7zeBojryjoWF_0
+name: 'Hong Kong'
+alpha_2: HK
+alpha_3: HKG
+numeric: 344
+zones:
+  HK: 'Hong Kong'
+  NT: 'New Territories'
+address_format:
+  - '!company'
+  - '!first_name !last_name'
+  - '!street1'
+  - '!street2'
+  - '!zone_name, !country_name'

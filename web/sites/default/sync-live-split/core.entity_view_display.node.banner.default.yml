@@ -1,0 +1,36 @@
+uuid: 7bbf03e0-1c04-4de3-ba35-f49ed038daef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.banner.body
+    - field.field.node.banner.field_image
+    - node.type.banner
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: wKo3xEYgSi11sC_WMbomOnujUm9AzTqvK4voyzxaHBo
+id: node.banner.default
+targetEntityType: node
+bundle: banner
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+hidden: {  }

@@ -1,0 +1,33 @@
+uuid: fab295bc-80f2-4d1b-8bb6-a46289b35d95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.catalog.uc_catalog_image
+    - image.style.uc_category
+    - taxonomy.vocabulary.catalog
+  module:
+    - image
+    - text
+_core:
+  default_config_hash: OysXw6LlU7etM_0Y-gPczd7fMfJVOQja_UhfarTXukc
+id: taxonomy_term.catalog.default
+targetEntityType: taxonomy_term
+bundle: catalog
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  uc_catalog_image:
+    label: hidden
+    type: image
+    settings:
+      image_link: content
+      image_style: uc_category
+    weight: 1
+    third_party_settings: {  }
+hidden: {  }

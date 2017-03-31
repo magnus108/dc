@@ -1,0 +1,7 @@
+breadcrumb: true
+display: catalog
+vocabulary: catalog
+expand_categories: false
+block_nodecount: true
+_core:
+  default_config_hash: q-6L3lQQM9y1tqTV5OlQ5Fzc18ue_lkg12VGO1MmwkM

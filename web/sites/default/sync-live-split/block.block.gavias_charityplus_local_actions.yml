@@ -1,0 +1,20 @@
+uuid: 6b2085b3-d0dc-49b5-872c-f9f62135143e
+langcode: en
+status: false
+dependencies:
+  theme:
+    - gavias_charityplus
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: gavias_charityplus_local_actions
+theme: gavias_charityplus
+region: '-1'
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

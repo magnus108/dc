@@ -1,0 +1,29 @@
+uuid: e4c764a3-912c-4a07-b503-a5ac9724c066
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_goal
+    - node.type.product
+  module:
+    - uc_product
+_core:
+  default_config_hash: Vw8Ur0lop-USjcQZ7nQI1OUgZUfG3WcjxLssnHcnyBY
+id: node.product.field_campaign_goal
+field_name: field_campaign_goal
+entity_type: node
+bundle: product
+label: 'Campaign Goal'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: $
+  suffix: ''
+field_type: uc_price

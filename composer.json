@@ -1,0 +1,25 @@
+{
+    "name": "root/cchelp",
+    "type": "project",
+    "require": {
+        "composer/installers": "^1.2",
+        "drupal/core": "^8.2",
+        "drush/drush": "^8.1"
+    },
+    "authors": [
+        {
+            "name": "Magnus Møller",
+            "email": "magnus108@me.com"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/drush/contrib/{$name}": ["type:drupal-drush"]
+        }
+    }
+}

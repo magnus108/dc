@@ -1,0 +1,17 @@
+uuid: 8ab46f58-63da-417b-b9c8-6d356d59dae5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: X-DLeSEVNUHBq8BmuxAcdIuH_N3NeNgF2mGonZrNHgw
+name: uc_product
+label: Product
+effects:
+  56215d8a-39f0-4137-9400-df0d11b28f91:
+    uuid: 56215d8a-39f0-4137-9400-df0d11b28f91
+    id: image_scale
+    weight: 1
+    data:
+      width: 250
+      height: 250
+      upscale: false

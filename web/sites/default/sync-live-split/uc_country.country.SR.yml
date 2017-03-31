@@ -1,0 +1,28 @@
+uuid: a6a6c45c-3673-4d85-b698-cbc3cffea9bf
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: fDJd_rC5v6c8q_F-CNWT1LyfPW0rzJQ4-ehiSQ75Pn8
+name: Suriname
+alpha_2: SR
+alpha_3: SUR
+numeric: 740
+zones:
+  BR: Brokopondo
+  CM: Commonwijne
+  CR: Coronie
+  MA: Marowijne
+  NI: Nickerie
+  PR: Para
+  PM: Paramaribo
+  SA: Saramacca
+  SI: Sipaliwini
+  WA: Wanica
+address_format:
+  - '!company'
+  - '!first_name !last_name'
+  - '!street1'
+  - '!street2'
+  - '!city !zone_code !postal_code'
+  - '!country_name_if'

@@ -1,0 +1,80 @@
+uuid: 9eebc002-b39a-4093-b5c4-875d68bf2886
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.product.body
+    - field.field.node.product.comment
+    - field.field.node.product.field_campaign_goal
+    - field.field.node.product.field_campaign_start
+    - field.field.node.product.field_campaign_time
+    - field.field.node.product.taxonomy_catalog
+    - field.field.node.product.uc_product_image
+    - image.style.normal_size
+    - node.type.product
+  module:
+    - datetime
+    - image
+    - text
+    - uc_product
+    - user
+_core:
+  default_config_hash: fcbvC6VFJaOm3UFrFLay5mtHLFqk-hBCFSAClg2ChSQ
+id: node.product.teaser
+targetEntityType: node
+bundle: product
+mode: teaser
+content:
+  add_to_cart:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_trimmed
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 120
+    third_party_settings: {  }
+  field_campaign_goal:
+    type: uc_price
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_campaign_start:
+    type: uc_price
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_campaign_time:
+    type: datetime_custom
+    weight: 5
+    label: hidden
+    settings:
+      date_format: 'Y-m-d\TH:i:s'
+      timezone_override: ''
+    third_party_settings: {  }
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  uc_product_image:
+    label: hidden
+    type: image
+    weight: 2
+    settings:
+      image_style: normal_size
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  comment: true
+  cost: true
+  dimensions: true
+  display_price: true
+  model: true
+  price: true
+  taxonomy_catalog: true
+  weight: true

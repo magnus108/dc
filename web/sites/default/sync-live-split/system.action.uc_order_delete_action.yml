@@ -1,0 +1,13 @@
+uuid: 60a9e411-5492-451f-8214-e58e34adfcf6
+langcode: en
+status: true
+dependencies:
+  module:
+    - uc_order
+_core:
+  default_config_hash: HKbcoUgntVzJAUg-XUSPP1dQV3KsblZUTvWVOqx66A0
+id: uc_order_delete_action
+label: 'Delete order'
+type: uc_order
+plugin: uc_order_delete_action
+configuration: {  }

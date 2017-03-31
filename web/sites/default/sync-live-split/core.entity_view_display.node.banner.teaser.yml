@@ -1,0 +1,30 @@
+uuid: 877bbac3-9ee5-4758-ab1a-8ec090dd9a4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.banner.body
+    - field.field.node.banner.field_image
+    - node.type.banner
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: K9wPhRsR2J45cuB_ARMv1b7v1tND2qxZGfkgK7h1-xI
+id: node.banner.teaser
+targetEntityType: node
+bundle: banner
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_image: true

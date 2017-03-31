@@ -1,0 +1,33 @@
+uuid: 1a09eb51-3be8-4ad9-a964-2465d1d5bec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.field_block_builder
+    - node.type.page
+  module:
+    - gavias_blockbuilder
+    - text
+    - user
+_core:
+  default_config_hash: oZ-7vpIJxjxL2up9B5KrJGD0lazQ9aN0P-fIPo6OrSU
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_block_builder:
+    type: blockbuilder_formatter
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

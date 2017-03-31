@@ -1,0 +1,30 @@
+uuid: 0e5580b6-3fc8-45fc-b459-b8a152e13d3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - gaviasthemer
+    - search
+  theme:
+    - gavias_charityplus
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: searchform
+theme: gavias_charityplus
+region: quick_menu
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

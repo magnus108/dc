@@ -1,0 +1,8 @@
+uuid: da22b8f5-2cf3-4644-af22-2c7300c66c8d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iNPW5TRedU-6rwn5Ff8gp2u9r9EqEmHrZTHnw0-Qk-8
+id: field_team_social
+label: field_team_social

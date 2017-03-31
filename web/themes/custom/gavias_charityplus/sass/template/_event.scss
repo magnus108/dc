@@ -1,0 +1,85 @@
+.event-list-item{
+  .event-date{
+    display: inline-block;
+    background: #28292B;
+    color: $white;
+    @include border-radius(3px);
+    padding: 0 15px;
+    font-size: 13px;
+    line-height: 30px;
+    line-height: 24px;
+  }
+  .event-title{
+    margin-top: 5px;
+    a{
+      font-size: 20px;
+      color: $theme-color;
+      font-weight: 400;
+    }
+  }
+  .event-body{
+    color: #232526;
+  }
+}
+
+
+.event-block{
+  .event-content{
+    background: $white;
+    position: relative;
+    top: -30px;
+    margin-left: 30px;
+    right: 0;
+    z-index: 9;
+    padding: 20px 30px 30px;
+    .event-title{
+      a{
+        font-size: 20px;
+        font-family: $font-second;
+      }
+    }
+    .readmore a{
+      font-size: 18px;
+      font-weight: 600;
+      color: $theme-color;
+      font-family: $font-second;
+      span{
+        margin-left: 5px;
+      }
+      &:hover, &:focus, &:active{
+        color: $black;
+      }
+    }
+  }
+  .event-footer{
+    @include clearfix();
+    margin-top: 15px;
+    span{
+      float: left;
+      font-size: 15px;
+      width: 50%;
+      .icon{
+        color: $theme-color;
+        width: 18px;
+      }
+    }
+  }
+}
+
+.event-full{
+  .event-info{
+    background: #f5f5f5;
+    padding: 30px;
+    font-size: 16px;
+    font-family: $font-second;
+    .date, .address{
+      > *{
+        float: left;
+      }
+      i{
+        margin-right: 10px;
+        margin-top: 6px;
+      }
+    }
+  }
+}

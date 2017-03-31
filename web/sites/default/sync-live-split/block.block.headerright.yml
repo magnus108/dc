@@ -1,0 +1,32 @@
+uuid: fd96f24c-c673-47df-b134-8532a45bc559
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - gaviasthemer
+  theme:
+    - gavias_charityplus
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: headerright
+theme: gavias_charityplus
+region: header_right
+weight: 0
+provider: null
+plugin: 'block_content:2fa1ae1b-309e-4390-a9a0-10576d5a2345'
+settings:
+  id: 'block_content:2fa1ae1b-309e-4390-a9a0-10576d5a2345'
+  label: 'Header Right'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

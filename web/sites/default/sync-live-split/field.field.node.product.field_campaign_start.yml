@@ -1,0 +1,27 @@
+uuid: 3fe30661-01b9-4fcb-ba75-3ad9e3ff2767
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_start
+    - node.type.product
+  module:
+    - uc_product
+_core:
+  default_config_hash: '-PEm6s6kXQ8P3QSJzE59IeXdIwMtSoLa_H3GXJYJgMg'
+id: node.product.field_campaign_start
+field_name: field_campaign_start
+entity_type: node
+bundle: product
+label: 'Campaign Start'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: $
+  suffix: ''
+field_type: uc_price

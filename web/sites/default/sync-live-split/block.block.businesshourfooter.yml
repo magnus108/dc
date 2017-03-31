@@ -1,0 +1,32 @@
+uuid: 185084a1-f2a7-47f4-8201-fc49e24dad21
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - gaviasthemer
+  theme:
+    - gavias_charityplus
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: businesshourfooter
+theme: gavias_charityplus
+region: offcanvas
+weight: 0
+provider: null
+plugin: 'block_content:e9f1e0d2-c094-43b0-bc1f-2d77d533aaf6'
+settings:
+  id: 'block_content:e9f1e0d2-c094-43b0-bc1f-2d77d533aaf6'
+  label: 'Business hour - Footer'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

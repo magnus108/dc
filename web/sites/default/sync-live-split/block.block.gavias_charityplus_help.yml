@@ -1,0 +1,22 @@
+uuid: abfbce6e-c8d6-4294-880a-24f6094d28b2
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - gavias_charityplus
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: gavias_charityplus_help
+theme: gavias_charityplus
+region: '-1'
+weight: -10
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

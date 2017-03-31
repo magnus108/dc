@@ -1,0 +1,95 @@
+uuid: b976bfd6-5392-4076-ad95-7d789125fc7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.product.body
+    - field.field.node.product.comment
+    - field.field.node.product.field_campaign_goal
+    - field.field.node.product.field_campaign_start
+    - field.field.node.product.field_campaign_time
+    - field.field.node.product.taxonomy_catalog
+    - field.field.node.product.uc_product_image
+    - node.type.product
+  module:
+    - comment
+    - datetime
+    - image
+    - text
+    - uc_product
+    - user
+_core:
+  default_config_hash: P2nw1sIJ7AYto7GyPYBGr91ZtM5i0WvAVRmZ600eJfA
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  add_to_cart:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  comment:
+    weight: 9
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+  display_price:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  field_campaign_goal:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: uc_price
+  field_campaign_start:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: uc_price
+  field_campaign_time:
+    weight: 7
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  taxonomy_catalog:
+    type: entity_reference_label
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  uc_product_image:
+    type: image
+    weight: 4
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  cost: true
+  dimensions: true
+  model: true
+  price: true
+  weight: true

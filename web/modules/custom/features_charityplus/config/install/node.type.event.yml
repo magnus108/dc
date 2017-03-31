@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - uc_product
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  uc_product:
+    product: false
+    shippable: true
+    image_field: ''
+name: Event
+type: event
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

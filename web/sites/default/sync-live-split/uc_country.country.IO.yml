@@ -1,0 +1,18 @@
+uuid: 78682e60-c41c-4f17-af11-e64035a3f247
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: 6ssQVZr5tmHqIxxA1DqpWXe_J3jdIOKXZaDX4P-_7es
+name: 'British Indian Ocean Territory'
+alpha_2: IO
+alpha_3: IOT
+numeric: 86
+zones: {  }
+address_format:
+  - '!company'
+  - '!first_name !last_name'
+  - '!street1'
+  - '!street2'
+  - '!city  !postal_code'
+  - '!country_name_if'

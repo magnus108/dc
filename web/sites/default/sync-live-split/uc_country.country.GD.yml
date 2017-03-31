@@ -1,0 +1,18 @@
+uuid: de64bf6d-2206-4b10-ac1e-a9eed84ea912
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: 4Fose7dDnxW71UeQq149sNZpGCL35XdOP4d9mgSEZGA
+name: Grenada
+alpha_2: GD
+alpha_3: GRD
+numeric: 308
+zones: {  }
+address_format:
+  - '!company'
+  - '!first_name !last_name'
+  - '!street1'
+  - '!street2'
+  - '!city, !zone_name  !postal_code'
+  - '!country_name_if'

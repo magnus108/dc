@@ -1,0 +1,35 @@
+uuid: f75f453c-9798-40f7-8080-425c9876d244
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - gaviasthemer
+    - system
+  theme:
+    - gavias_charityplus
+third_party_settings:
+  gaviasthemer:
+    breadcrumb_background_image_path: ''
+    breadcrumb_background_color: ''
+    breadcrumb_background_position: 'center top'
+    breadcrumb_background_repeat: no-repeat
+    breadcrumb_color_style: text-dark
+    classes: ''
+id: breadcrumbs
+theme: gavias_charityplus
+region: breadcrumbs
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

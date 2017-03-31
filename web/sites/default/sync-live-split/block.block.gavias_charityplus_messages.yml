@@ -1,0 +1,22 @@
+uuid: 36365054-59f2-4322-8266-8dd7e982fb14
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gavias_charityplus
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: gavias_charityplus_messages
+theme: gavias_charityplus
+region: '-1'
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

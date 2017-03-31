@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t magnus108docker/dc_web .
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./deploy.sh

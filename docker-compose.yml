@@ -1,0 +1,61 @@
+# not sure about ./vendor
+version: '2'
+services:
+  web:
+    image: magnus108docker/dc_web
+    # Dette er en database migration måske skal den behandles som en?
+    # Altså kør drush commands. muligvis som www-data?
+    # docker exec cchelp_web_1 vendor/bin/drush -y -r web -u www-data site-install --account-name=$ACCOUNT_NAME --account-pass=$ACCOUNT_PASS --account-mail=$ACCOUNT_MAIL --locale=en --site-name=cchelp --site-mail=cchelp@cchelp.dk
+    ports:
+      - 8080:80
+    volumes:
+      - ./web:/var/www/html/web
+      - core-volume:/var/www/html/web/core
+      - libraries-volume:/var/www/html/web/libraries
+      - files-volume:/var/www/html/web/sites/default/files
+      - styles-volume:/var/www/html/web/sites/default/files/styles
+      - sync-volume:/var/www/html/web/sites/default/sync
+      - modules-contrib-volume:/var/www/html/web/modules/contrib
+      - profiles-contrib-volume:/var/www/html/web/profiles/contrib
+      - themes-contrib-volume:/var/www/html/web/themes/contrib
+      - drush-contrib-volume:/var/www/html/web/drush/contrib
+    depends_on:
+      - db
+    networks:
+      - db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ADDR: db
+    restart: always
+
+  db:
+    image: mysql:8
+    volumes:
+      - db-volume:/var/lib/mysql
+    networks:
+      - db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+    restart: always
+
+volumes:
+  core-volume:
+  libraries-volume:
+  files-volume:
+  styles-volume:
+  sync-volume:
+  modules-contrib-volume:
+  profiles-contrib-volume:
+  themes-contrib-volume:
+  drush-contrib-volume:
+  db-volume:
+
+networks:
+  db:

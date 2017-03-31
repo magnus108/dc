@@ -1,0 +1,138 @@
+{%
+  set classes = [
+    'node',
+    'node-detail',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+
+<!-- Start Display article for teaser page -->
+
+{% if view_mode == 'teaser' %}
+
+  <div class="campaign-block">      
+    <div class="portfolio-content">
+      <div class="image">
+        {{ content.uc_product_image }}
+        <div class="funded">
+          <div class="pieChart" data-bar-color="#FBB122" data-bar-width="80" data-percent="{{funded}}"><span>{{funded_label}}%</span> </div>
+        </div>
+      </div>
+      <div class="campaign-content">
+        <div class="content-inner">
+          <h4 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a> </h4> 
+          <div class="summary"> {{content.body}}</div> 
+        </div>   
+        <div class="content-action">
+          <a class="btn-theme" href="{{ url }}">{{ 'Donate now'|t }}</a>
+          <span class="days">{{ days_left }} {{'Days left'|t}} </span>
+        </div> 
+        <div class="content-raised"><span class="raised">{{raised}}</span> {{'Raised of'|t}} <span class="goal">{{ content.field_campaign_goal }}</span> {{'Goal'|t}}</div>
+      </div>
+    </div>
+  </div>
+
+{% elseif view_mode == 'teaser_2' %}
+  <div class="campaign-block v2">      
+    <div class="portfolio-content">
+      <div class="image">
+        {{ content.uc_product_image }}
+        <div class="funded">
+          <div class="progress">
+            <div class="progress-bar" data-progress-animation="{{funded}}%">
+              <span class="percentage"><span></span>{{ funded_label }}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="campaign-content">
+        <div class="content-inner">
+          <h4 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a> </h4> 
+          <div class="summary"> {{content.body}}</div> 
+        </div>   
+        <div class="content-action">
+          <a class="btn-theme" href="{{ url }}">{{ 'Donate now'|t }}</a>
+          <span class="days">{{ days_left }} {{'Days left'|t}} </span>
+        </div> 
+        <div class="content-raised"><span class="raised">{{raised}}</span> {{'Raised of'|t}} <span class="goal">{{ content.field_campaign_goal }}</span> {{'Goal'|t}}</div>
+      </div>
+    </div>
+  </div>
+
+{% else %}
+<!-- Start Display article for detail page -->
+<article{{ attributes.addClass(classes) }}>
+  <div class="campaign-block campaign-single">
+    <div class="campaign-thumbnail">
+      {% if content.uc_product_image %}
+        {{ content.uc_product_image }} 
+      {% endif %}
+    </div>
+    <div class="campaign-block v2">    
+      <div class="campaign-content">
+        <div class="content-inner margin-top-50">
+          <div class="funded">
+            <div class="progress">
+               <div class="progress-bar" data-progress-animation="{{funded}}%">
+                  <span class="percentage"><span></span><b>{{ funded }}%</b></span>
+               </div>
+            </div>
+          </div>
+        </div>   
+        <div class="row">
+          <div class="col-lg-5 col-sm-6 col-xs-12"><div class="content-raised"><span class="raised">{{raised}}</span> {{'Raised of'|t}} <span class="goal">{{ content.field_campaign_goal }}</span> {{'Goal'|t}}</div></div>
+          <div class="col-lg-3 col-sm-6 col-xs-12"><span class="days"><strong class="text-theme">{{ days_left }}</strong> {{'Days left'|t}} </span></div>
+          <div class="col-lg-4 col-sm-12 col-xs-12"><a class="btn btn-theme" href="#" data-toggle="modal" data-target="#popup-add-to-cart">{{'Donation now'|t}}</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="campaign-content-inner">
+      {{ title_prefix }}
+         <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
+      {{ title_suffix }}         
+      
+      <div class="clearfix">
+        <div id="popup-add-to-cart" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header clearfix">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body clearfix">
+                <div class="funded">
+                  <div class="pieChart" data-bar-color="#FBB122" data-bar-width="150" data-percent="{{funded}}">
+                      <span>{{funded}}%</span>  
+                  </div>
+                </div>
+                <div class="add-to-cart-content-inner">
+                  {{content.add_to_cart|raw}}
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+        {{ content|without('field_campaign_goal','field_campaign_start', 'field_campaign_time', 'taxonomy_catalog', 'uc_product_image', 'comment', 'display_price', 'add_to_cart') }}
+      </div>
+    
+      <div class="post-categories margin-top-20">{{ content.taxonomy_catalog }}</div>
+
+      {% if content.comment %}
+        <div id="node-single-comment">
+          {{ content.comment }}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</article>
+<!-- End Display article for detail page -->
+{% endif %}

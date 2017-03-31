@@ -1,0 +1,6 @@
+type: module
+name : Gavias Charityplus Themer
+description : Gavias Charityplus Themer
+package: gavias
+core: '8.x'
+project: 'gavias_charityplus_themer'

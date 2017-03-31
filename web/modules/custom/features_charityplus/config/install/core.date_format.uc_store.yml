@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: uc_store
+label: 'Ubercart date'
+locked: false
+pattern: m-d-Y

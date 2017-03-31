@@ -1,0 +1,82 @@
+uuid: 8aaba182-4605-4d8b-84ed-b8b74016ea5c
+langcode: en
+status: false
+dependencies: {  }
+id: live_split
+label: Live-split
+folder: sites/default/sync-live-split
+module:
+  admin_toolbar: 0
+  automated_cron: 0
+  block: 0
+  block_content: 0
+  block_visibility_groups: 0
+  breakpoint: 0
+  ckeditor: 0
+  color: 0
+  comment: 0
+  config: 0
+  config_filter: 0
+  config_split: 0
+  config_update: 0
+  contact: 0
+  contact_block: 0
+  contextual: 0
+  ctools: 0
+  datetime: 0
+  dblog: 0
+  dynamic_page_cache: 0
+  editor: 0
+  features: 0
+  features_charityplus: 0
+  field: 0
+  field_collection: 0
+  field_ui: 0
+  file: 0
+  filter: 0
+  gavias_blockbuilder: 0
+  gavias_elements: 0
+  gavias_hook_themer: 0
+  gavias_sliderlayer: 0
+  gavias_view: 0
+  gaviasthemer: 0
+  help: 0
+  history: 0
+  image: 0
+  image_url_formatter: 0
+  link: 0
+  menu_ui: 0
+  node: 0
+  options: 0
+  page_cache: 0
+  path: 0
+  pathauto: 0
+  simplenews: 0
+  system: 0
+  taxonomy: 0
+  text: 0
+  token: 0
+  tour: 0
+  twitter_block: 0
+  uc_2checkout: 0
+  uc_attribute: 0
+  uc_cart: 0
+  uc_catalog: 0
+  uc_country: 0
+  uc_credit: 0
+  uc_payment: 0
+  uc_payment_pack: 0
+  uc_paypal: 0
+  uc_product: 0
+  uc_store: 0
+  update: 0
+  views_infinite_scroll: 0
+  views_ui: 0
+  views: 10
+  standard: 1000
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

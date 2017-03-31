@@ -1,0 +1,18 @@
+uuid: f990a9e8-900e-468d-a853-26b9cbc3ddc9
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: 6XVf5xVtSQ6bdfpFgSaynVjTvLMG_OhikOfQ7kVbZQY
+name: 'South Georgia and the South Sandwich Islands'
+alpha_2: GS
+alpha_3: SGS
+numeric: 239
+zones: {  }
+address_format:
+  - '!company'
+  - '!first_name !last_name'
+  - '!street1'
+  - '!street2'
+  - '!city  !postal_code'
+  - '!country_name_if'
