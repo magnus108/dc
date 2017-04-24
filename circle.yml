@@ -4,10 +4,14 @@ machine:
 
 dependencies:
   override:
-    - docker build -t magnus108docker/dc_web .
+    - docker build --rm=false -t magnus108docker/dc_web:$CIRCLE_BRANCH .
 
 deployment:
   production:
     branch: master
     commands:
-      - ./deploy.sh
+      - ./deploy.sh $EC2_ADDR_PRODUCTION
+  staging:
+    branch: staging
+    commands:
+      - ./deploy.sh $EC2_ADD_STAGING
