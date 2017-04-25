@@ -14,4 +14,4 @@ deployment:
   staging:
     branch: staging
     commands:
-      - ./deploy.sh $EC2_ADD_STAGING
+      - ./deploy.sh $EC2_ADDR_STAGING
