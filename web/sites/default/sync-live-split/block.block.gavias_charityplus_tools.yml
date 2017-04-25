@@ -13,7 +13,7 @@ _core:
 id: gavias_charityplus_tools
 theme: gavias_charityplus
 region: '-1'
-weight: -2
+weight: 1
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

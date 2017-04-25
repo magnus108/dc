@@ -9,7 +9,7 @@ _core:
 id: gavias_charityplus_local_actions
 theme: gavias_charityplus
 region: '-1'
-weight: -6
+weight: -4
 provider: null
 plugin: local_actions_block
 settings:

@@ -7,11 +7,19 @@ _core:
 name: uc_product
 label: Product
 effects:
-  56215d8a-39f0-4137-9400-df0d11b28f91:
-    uuid: 56215d8a-39f0-4137-9400-df0d11b28f91
-    id: image_scale
-    weight: 1
+  07a46934-e027-481a-b1f3-bee4af094160:
+    uuid: 07a46934-e027-481a-b1f3-bee4af094160
+    id: image_crop
+    weight: -9
     data:
-      width: 250
-      height: 250
+      width: 1170
+      height: 658
+      anchor: center-center
+  569464a9-4a83-402f-a86b-f24bf0fa3000:
+    uuid: 569464a9-4a83-402f-a86b-f24bf0fa3000
+    id: image_scale
+    weight: -10
+    data:
+      width: 1170
+      height: 658
       upscale: false

@@ -4,3 +4,10 @@ gva-breadcrumb-1:
 gva-breadcrumb-2:
   -
     value: disable
+gva-breadcrumb-6:
+  -
+    value: enable
+gva-breadcrumb-7:
+  -
+    value: disable
+gva-breadcrumb-16: {  }

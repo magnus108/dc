@@ -11,7 +11,7 @@ _core:
 id: gavias_charityplus_messages
 theme: gavias_charityplus
 region: '-1'
-weight: -4
+weight: -1
 provider: null
 plugin: system_messages_block
 settings:

@@ -1,6 +1,6 @@
 uuid: f75f453c-9798-40f7-8080-425c9876d244
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - block_visibility_groups
@@ -14,12 +14,12 @@ third_party_settings:
     breadcrumb_background_color: ''
     breadcrumb_background_position: 'center top'
     breadcrumb_background_repeat: no-repeat
-    breadcrumb_color_style: text-dark
+    breadcrumb_color_style: text-light
     classes: ''
 id: breadcrumbs
 theme: gavias_charityplus
-region: breadcrumbs
-weight: 0
+region: '-1'
+weight: 3
 provider: null
 plugin: system_breadcrumb_block
 settings:

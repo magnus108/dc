@@ -9,7 +9,7 @@ _core:
 id: gavias_charityplus_page_title
 theme: gavias_charityplus
 region: '-1'
-weight: -8
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
