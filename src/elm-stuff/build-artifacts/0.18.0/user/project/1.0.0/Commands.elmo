@@ -1,0 +1,6 @@
+var _user$project$Commands$fetchPageUrl = 'http://localhost:8080/web/api/pages/16';
+var _user$project$Commands$fetchPage = A2(
+	_elm_lang$core$Platform_Cmd$map,
+	_user$project$Messages$OnFetchPage,
+	_user$project$RemoteData$sendRequest(
+		A2(_elm_lang$http$Http$get, _user$project$Commands$fetchPageUrl, _user$project$Page_Commands$pageDecoder)));

@@ -1,0 +1,30 @@
+var _user$project$Update$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		if (_p0.ctor === 'OnFetchPage') {
+			return {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_Utils.update(
+					model,
+					{page: _p0._0}),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		} else {
+			var _p1 = A2(
+				_user$project$RemoteData$update,
+				_user$project$Page_Update$update(_p0._0),
+				model.page);
+			var newPage = _p1._0;
+			var cmds = _p1._1;
+			return A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				_elm_lang$core$Native_Utils.update(
+					model,
+					{page: newPage}),
+				{
+					ctor: '::',
+					_0: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Messages$PageMsg, cmds),
+					_1: {ctor: '[]'}
+				});
+		}
+	});

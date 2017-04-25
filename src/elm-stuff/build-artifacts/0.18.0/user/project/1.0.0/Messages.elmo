@@ -1,0 +1,6 @@
+var _user$project$Messages$PageMsg = function (a) {
+	return {ctor: 'PageMsg', _0: a};
+};
+var _user$project$Messages$OnFetchPage = function (a) {
+	return {ctor: 'OnFetchPage', _0: a};
+};
