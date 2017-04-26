@@ -15,13 +15,9 @@ var _user$project$Page_View$page = function (x) {
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$div,
+					_evancz$elm_markdown$Markdown$toHtml,
 					{ctor: '[]'},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(x.body),
-						_1: {ctor: '[]'}
-					}),
+					x.body),
 				_1: {ctor: '[]'}
 			}
 		});
