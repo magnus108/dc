@@ -1,0 +1,5 @@
+name: Magnus Rest
+type: module
+description: Everything related to rest
+core: 8.x
+package: MAGNUS
