@@ -1,6 +1,6 @@
 uuid: 8aaba182-4605-4d8b-84ed-b8b74016ea5c
 langcode: en
-status: false
+status: true
 dependencies: {  }
 id: live_split
 label: Live-split
@@ -8,6 +8,7 @@ folder: sites/default/sync-live-split
 module:
   admin_toolbar: 0
   automated_cron: 0
+  basic_auth: 0
   block: 0
   block_content: 0
   block_visibility_groups: 0
@@ -40,17 +41,21 @@ module:
   gavias_sliderlayer: 0
   gavias_view: 0
   gaviasthemer: 0
+  hal: 0
   help: 0
   history: 0
   image: 0
   image_url_formatter: 0
   link: 0
+  magnus_rest: 0
   menu_ui: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   pathauto: 0
+  rest: 0
+  serialization: 0
   simplenews: 0
   system: 0
   taxonomy: 0
