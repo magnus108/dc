@@ -34,6 +34,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: hidden
+    region: content
   comment:
     type: comment_default
     weight: 3
@@ -42,6 +43,7 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+    region: content
   field_image:
     type: image
     weight: 0
@@ -50,6 +52,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+    region: content
   field_post_category:
     type: entity_reference_label
     weight: 8
@@ -57,6 +60,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+    region: content
   field_post_embed:
     type: string
     weight: 7
@@ -64,12 +68,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_post_format:
     type: list_default
     weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_post_gallery:
     type: image
     weight: 6
@@ -78,12 +84,14 @@ content:
       image_style: uc_product
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_post_type:
     type: list_default
     weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_tags:
     type: entity_reference_label
     weight: 2
@@ -91,8 +99,10 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+    region: content
   links:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

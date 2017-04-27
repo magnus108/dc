@@ -12,7 +12,7 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: gavias_charityplus_footer
 theme: gavias_charityplus
-region: '-1'
+region: drupal_message
 weight: -11
 provider: null
 plugin: 'system_menu_block:footer'

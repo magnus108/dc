@@ -18,7 +18,7 @@ third_party_settings:
     classes: ''
 id: breadcrumbs
 theme: gavias_charityplus
-region: '-1'
+region: drupal_message
 weight: 3
 provider: null
 plugin: system_breadcrumb_block

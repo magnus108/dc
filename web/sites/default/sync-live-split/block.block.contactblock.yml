@@ -15,7 +15,7 @@ third_party_settings:
     classes: ''
 id: contactblock
 theme: gavias_charityplus
-region: '-1'
+region: drupal_message
 weight: -12
 provider: null
 plugin: contact_block

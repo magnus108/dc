@@ -8,7 +8,7 @@ _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: gavias_charityplus_local_actions
 theme: gavias_charityplus
-region: '-1'
+region: drupal_message
 weight: -4
 provider: null
 plugin: local_actions_block

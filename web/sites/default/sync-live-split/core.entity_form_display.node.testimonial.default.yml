@@ -29,11 +29,13 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_testimonial_avatar:
     weight: 26
     settings:
@@ -41,6 +43,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_testimonial_job:
     weight: 5
     settings:
@@ -48,6 +51,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_testimonial_name:
     weight: 4
     settings:
@@ -55,6 +59,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_testimonial_video:
     weight: 36
     settings:
@@ -62,21 +67,25 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   gva_box_layout:
     type: options_select
     weight: 35
     settings: {  }
     third_party_settings: {  }
+    region: content
   gva_breadcrumb:
     type: options_select
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
   gva_header:
     type: options_select
     weight: 35
     settings: {  }
     third_party_settings: {  }
+    region: content
   gva_node_class:
     type: string_textfield
     weight: 35
@@ -84,28 +93,33 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   gva_node_layout:
     type: options_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 8
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 3
     third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 7
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -113,6 +127,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 1
@@ -121,4 +136,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

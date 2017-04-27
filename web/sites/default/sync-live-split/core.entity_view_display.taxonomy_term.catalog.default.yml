@@ -22,6 +22,7 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   uc_catalog_image:
     label: hidden
     type: image
@@ -30,4 +31,5 @@ content:
       image_style: uc_category
     weight: 1
     third_party_settings: {  }
+    region: content
 hidden: {  }

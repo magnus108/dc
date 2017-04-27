@@ -13,7 +13,7 @@ third_party_settings:
     classes: ''
 id: searchform
 theme: gavias_charityplus
-region: '-1'
+region: drupal_message
 weight: -2
 provider: null
 plugin: search_form_block

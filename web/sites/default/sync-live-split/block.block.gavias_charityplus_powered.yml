@@ -10,7 +10,7 @@ _core:
   default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
 id: gavias_charityplus_powered
 theme: gavias_charityplus
-region: '-1'
+region: drupal_message
 weight: -5
 provider: null
 plugin: system_powered_by_block

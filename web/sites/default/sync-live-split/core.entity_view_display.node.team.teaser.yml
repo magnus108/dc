@@ -34,6 +34,7 @@ content:
     settings:
       trim_length: 40
     third_party_settings: {  }
+    region: content
   field_team_image:
     type: image
     weight: 6
@@ -42,6 +43,7 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   field_team_name:
     type: string
     weight: 5
@@ -49,6 +51,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_team_position:
     type: string
     weight: 4
@@ -56,22 +59,26 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_team_quote:
     type: basic_string
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_team_social:
     type: field_collection_items
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   links:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   field_team_contact: true
   field_team_description: true

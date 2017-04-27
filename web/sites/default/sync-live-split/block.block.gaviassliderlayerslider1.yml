@@ -13,7 +13,7 @@ third_party_settings:
     classes: ''
 id: gaviassliderlayerslider1
 theme: gavias_charityplus
-region: '-1'
+region: drupal_message
 weight: -9
 provider: null
 plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
