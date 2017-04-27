@@ -2,10 +2,7 @@
 version: '2'
 services:
   web:
-    image: magnus108docker/dc_web
-    # Dette er en database migration måske skal den behandles som en?
-    # Altså kør drush commands. muligvis som www-data?
-    # docker exec cchelp_web_1 vendor/bin/drush -y -r web -u www-data site-install --account-name=$ACCOUNT_NAME --account-pass=$ACCOUNT_PASS --account-mail=$ACCOUNT_MAIL --locale=en --site-name=cchelp --site-mail=cchelp@cchelp.dk
+    build: .
     ports:
       - 8080:80
     volumes:
