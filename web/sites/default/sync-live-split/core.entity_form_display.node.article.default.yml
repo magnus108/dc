@@ -34,19 +34,16 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-    region: content
   comment:
     type: comment_default
     weight: 10
     settings: {  }
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 7
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_image:
     type: image_image
     weight: 5
@@ -54,7 +51,6 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    region: content
   field_post_category:
     type: entity_reference_autocomplete
     weight: 15
@@ -63,7 +59,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_post_embed:
     type: string_textfield
     weight: 14
@@ -71,13 +66,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_post_format:
     type: options_select
     weight: 12
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_post_gallery:
     type: image_image
     weight: 13
@@ -85,13 +78,11 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    region: content
   field_post_type:
     type: options_select
     weight: 19
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 4
@@ -100,25 +91,21 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   gva_box_layout:
     type: options_select
     weight: 18
     settings: {  }
     third_party_settings: {  }
-    region: content
   gva_breadcrumb:
     type: options_select
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    region: content
   gva_header:
     type: options_select
     weight: 16
     settings: {  }
     third_party_settings: {  }
-    region: content
   gva_node_class:
     type: string_textfield
     weight: 17
@@ -126,33 +113,28 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   gva_node_layout:
     type: options_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 11
     settings: {  }
     third_party_settings: {  }
-    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 8
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 9
     third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 0
@@ -160,7 +142,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 6
@@ -169,5 +150,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
 hidden: {  }

@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.uc_product_image
+    - image.style.uc_thumbnail
     - system.menu.admin
   module:
+    - image
     - node
     - uc_product
     - user
@@ -412,7 +415,8 @@ display:
         - user.permissions
       cacheable: false
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.uc_product_image'
   admin_page:
     display_plugin: page
     id: admin_page
@@ -439,4 +443,5 @@ display:
         - user.permissions
       cacheable: false
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.uc_product_image'

@@ -30,7 +30,6 @@ content:
     settings:
       trim_length: 300
     third_party_settings: {  }
-    region: content
   field_event_address:
     type: string
     weight: 4
@@ -38,7 +37,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    region: content
   field_event_image:
     type: image
     weight: 3
@@ -47,7 +45,6 @@ content:
       image_style: normal_size
       image_link: content
     third_party_settings: {  }
-    region: content
   field_event_start:
     type: datetime_default
     weight: 2
@@ -56,11 +53,9 @@ content:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
-    region: content
   links:
     weight: 0
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_event_map: true

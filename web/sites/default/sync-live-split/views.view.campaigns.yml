@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - core.entity_view_mode.node.teaser_2
+    - field.storage.node.taxonomy_catalog
     - node.type.product
   module:
     - gavias_view
@@ -496,7 +497,8 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.taxonomy_catalog'
   block_6:
     display_plugin: block
     id: block_6
@@ -668,4 +670,5 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.taxonomy_catalog'

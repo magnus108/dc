@@ -1,6 +1,6 @@
 uuid: 8aaba182-4605-4d8b-84ed-b8b74016ea5c
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: live_split
 label: Live-split
@@ -8,7 +8,6 @@ folder: sites/default/sync-live-split
 module:
   admin_toolbar: 0
   automated_cron: 0
-  basic_auth: 0
   block: 0
   block_content: 0
   block_visibility_groups: 0
@@ -41,21 +40,17 @@ module:
   gavias_sliderlayer: 0
   gavias_view: 0
   gaviasthemer: 0
-  hal: 0
   help: 0
   history: 0
   image: 0
   image_url_formatter: 0
   link: 0
-  magnus_rest: 0
   menu_ui: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   pathauto: 0
-  rest: 0
-  serialization: 0
   simplenews: 0
   system: 0
   taxonomy: 0
@@ -80,39 +75,7 @@ module:
   views: 10
   standard: 1000
 theme: {  }
-blacklist:
-  - core.entity_view_mode.menu_link_content.token
-  - core.entity_view_mode.shortcut.token
-  - core.entity_view_mode.uc_order.admin
-  - core.entity_view_mode.uc_order.customer
-  - core.entity_view_mode.uc_order_product.cart
-  - core.entity_view_mode.uc_order_product.full
-  - core.entity_view_mode.user.compact
-  - core.entity_view_mode.user.full
-  - core.entity_view_mode.user.token
-  - core.extension
-  - core.menu.static_menu_link_overrides
-  - gavias_charityplus.settings
-  - rdf.mapping.user.user
-  - search.page.user_search
-  - search.settings
-  - seven.settings
-  - shortcut.set.default
-  - uc_order.settings
-  - uc_order.status.abandoned
-  - uc_order.status.canceled
-  - uc_order.status.completed
-  - uc_order.status.in_checkout
-  - uc_order.status.payment_received
-  - uc_order.status.paypal_pending
-  - uc_order.status.pending
-  - uc_order.status.processing
-  - user.flood
-  - user.mail
-  - user.role.administrator
-  - user.role.anonymous
-  - user.role.authenticated
-  - user.settings
+blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true

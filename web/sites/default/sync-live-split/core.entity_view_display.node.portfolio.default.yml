@@ -25,7 +25,6 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_portfolio_images:
     weight: 6
     label: hidden
@@ -34,7 +33,6 @@ content:
       image_link: content
     third_party_settings: {  }
     type: image
-    region: content
   field_portfolio_information:
     weight: 7
     label: above
@@ -42,7 +40,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
   field_portfolio_tags:
     weight: 3
     label: hidden
@@ -50,10 +47,8 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
   links:
     weight: 0
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

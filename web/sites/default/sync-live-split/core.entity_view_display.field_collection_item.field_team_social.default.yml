@@ -20,7 +20,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
   field_team_social_link:
     weight: 1
     label: above
@@ -28,5 +27,4 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
 hidden: {  }
