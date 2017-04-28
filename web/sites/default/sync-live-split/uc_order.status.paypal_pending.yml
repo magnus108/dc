@@ -1,0 +1,11 @@
+uuid: 7ceb961c-eb9b-4172-b083-36d4a6b5308f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Iqj5hrGwjmsCBRfeWNUrB7MwMAQ_jRIE-9AJts0AiTY
+id: paypal_pending
+name: 'PayPal pending'
+state: post_checkout
+weight: 7
+locked: true

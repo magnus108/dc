@@ -1,0 +1,21 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+  path: 'public://logo.png'
+favicon:
+  use_default: 1
+theme_skin: ''
+enable_customize: '0'
+sticky_menu: '0'
+site_layout: wide
+preloader: '0'
+default_header: header
+link_donation: ''
+logo_demo: disable
+footer_fixed: ''
+footer_skin: footer-v1
+customize_css: ''

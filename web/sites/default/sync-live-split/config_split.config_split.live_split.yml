@@ -80,7 +80,39 @@ module:
   views: 10
   standard: 1000
 theme: {  }
-blacklist: {  }
+blacklist:
+  - core.entity_view_mode.menu_link_content.token
+  - core.entity_view_mode.shortcut.token
+  - core.entity_view_mode.uc_order.admin
+  - core.entity_view_mode.uc_order.customer
+  - core.entity_view_mode.uc_order_product.cart
+  - core.entity_view_mode.uc_order_product.full
+  - core.entity_view_mode.user.compact
+  - core.entity_view_mode.user.full
+  - core.entity_view_mode.user.token
+  - core.extension
+  - core.menu.static_menu_link_overrides
+  - gavias_charityplus.settings
+  - rdf.mapping.user.user
+  - search.page.user_search
+  - search.settings
+  - seven.settings
+  - shortcut.set.default
+  - uc_order.settings
+  - uc_order.status.abandoned
+  - uc_order.status.canceled
+  - uc_order.status.completed
+  - uc_order.status.in_checkout
+  - uc_order.status.payment_received
+  - uc_order.status.paypal_pending
+  - uc_order.status.pending
+  - uc_order.status.processing
+  - user.flood
+  - user.mail
+  - user.role.administrator
+  - user.role.anonymous
+  - user.role.authenticated
+  - user.settings
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
