@@ -20,6 +20,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_team_social_link:
     weight: 1
     settings:
@@ -27,4 +28,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
 hidden: {  }

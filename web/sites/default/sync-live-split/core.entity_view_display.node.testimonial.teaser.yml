@@ -27,8 +27,10 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   field_testimonial_avatar: true
   field_testimonial_job: true

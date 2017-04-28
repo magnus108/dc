@@ -9,13 +9,9 @@ dependencies:
     - field.field.node.product.field_campaign_goal
     - field.field.node.product.field_campaign_start
     - field.field.node.product.field_campaign_time
-    - field.field.node.product.taxonomy_catalog
-    - field.field.node.product.uc_product_image
-    - image.style.normal_size
     - node.type.product
   module:
     - datetime
-    - image
     - text
     - uc_product
     - user
@@ -30,6 +26,7 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   body:
     type: text_trimmed
     weight: 6
@@ -37,18 +34,21 @@ content:
     settings:
       trim_length: 120
     third_party_settings: {  }
+    region: content
   field_campaign_goal:
     type: uc_price
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_campaign_start:
     type: uc_price
     weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_campaign_time:
     type: datetime_custom
     weight: 5
@@ -57,10 +57,12 @@ content:
       date_format: 'Y-m-d\TH:i:s'
       timezone_override: ''
     third_party_settings: {  }
+    region: content
   links:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   uc_product_image:
     label: hidden
     type: image
@@ -69,6 +71,7 @@ content:
       image_style: normal_size
       image_link: content
     third_party_settings: {  }
+    region: content
 hidden:
   comment: true
   cost: true

@@ -3,12 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.uc_product_image
-    - image.style.uc_product_list
     - taxonomy.vocabulary.catalog
     - views.view.uc_catalog_terms
   module:
-    - image
     - node
     - taxonomy
     - uc_product
@@ -532,8 +529,7 @@ display:
         - user.permissions
       cacheable: false
       max-age: -1
-      tags:
-        - 'config:field.storage.node.uc_product_image'
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -552,5 +548,4 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.uc_product_image'
+      tags: {  }
