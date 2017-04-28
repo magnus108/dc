@@ -1,23 +1,11 @@
 var _user$project$Page_View$page = function (x) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{ctor: '[]'},
+	return _user$project$Bootstrap$mdContent(
 		{
 			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$h1,
-				{ctor: '[]'},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text(x.title),
-					_1: {ctor: '[]'}
-				}),
+			_0: _user$project$Bootstrap$mdTitle(x.title),
 			_1: {
 				ctor: '::',
-				_0: A2(
-					_evancz$elm_markdown$Markdown$toHtml,
-					{ctor: '[]'},
-					x.body),
+				_0: _user$project$Bootstrap$mdMarkdown(x.body),
 				_1: {ctor: '[]'}
 			}
 		});

@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100%;
+}
+
+.bootstrapMdContent {
+    flex: 8;
+    padding: 0 40px;
+}
+
+.bootstrapFlex {
+    flex: 1;
+}
+
+.bootstrapRow {
+    display: flex;
+    flex-flow: nowrap row;
+}
+
+.bootstrapColumn {
+    display: flex;
+    flex-flow: nowrap column;
+}
+
+.bootstrapTitle {
+    color: #212121;
+}
+
+.bootstrapMarkdown {
+    background-color: #d1c4e9;
+}
