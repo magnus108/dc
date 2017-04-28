@@ -251,7 +251,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/pages
+      path: api/pages1
       pager:
         type: none
         options:
