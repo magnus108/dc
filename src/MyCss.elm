@@ -7,6 +7,7 @@ import Css.Elements
   exposing
     ( html
     , body
+    , img
     )
 
 import Css.Namespace exposing (namespace)
@@ -21,6 +22,7 @@ type CssClasses
   | Column
   | Title
   | Markdown
+  | BackgroundImage
 
 
 name : String
@@ -55,8 +57,29 @@ css =
     ]
   , class Title
     [ color primaryTextColor
+    , backgroundColor primaryDarkColor
     ]
   , class Markdown
     [ backgroundColor primaryLightColor
+    ]
+  , class BackgroundImage
+    [ position fixed
+    , top (pct -50)
+    , left (pct -50)
+    , width (pct 200)
+    , height (pct 200)
+    , zIndex (int -1)
+    , children
+      [ img
+        [  position absolute
+        , top zero
+        , left zero
+        , right zero
+        , bottom zero
+        , margin auto
+        , minWidth (pct 50)
+        , minHeight (pct 50)
+        ]
+      ]
     ]
   ]

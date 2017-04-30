@@ -14548,6 +14548,7 @@ var _user$project$Colors$primaryBoxShadow = A5(
 	A4(_rtfeldman$elm_css$Css$rgba, 0, 0, 0, 0.26));
 
 var _user$project$MyCss$name = 'bootstrap';
+var _user$project$MyCss$BackgroundImage = {ctor: 'BackgroundImage'};
 var _user$project$MyCss$Markdown = {ctor: 'Markdown'};
 var _user$project$MyCss$Title = {ctor: 'Title'};
 var _user$project$MyCss$Column = {ctor: 'Column'};
@@ -14649,7 +14650,11 @@ var _user$project$MyCss$css = function (_p0) {
 									{
 										ctor: '::',
 										_0: _rtfeldman$elm_css$Css$color(_user$project$Colors$primaryTextColor),
-										_1: {ctor: '[]'}
+										_1: {
+											ctor: '::',
+											_0: _rtfeldman$elm_css$Css$backgroundColor(_user$project$Colors$primaryDarkColor),
+											_1: {ctor: '[]'}
+										}
 									}),
 								_1: {
 									ctor: '::',
@@ -14661,7 +14666,87 @@ var _user$project$MyCss$css = function (_p0) {
 											_0: _rtfeldman$elm_css$Css$backgroundColor(_user$project$Colors$primaryLightColor),
 											_1: {ctor: '[]'}
 										}),
-									_1: {ctor: '[]'}
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_rtfeldman$elm_css$Css$class,
+											_user$project$MyCss$BackgroundImage,
+											{
+												ctor: '::',
+												_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$fixed),
+												_1: {
+													ctor: '::',
+													_0: _rtfeldman$elm_css$Css$top(
+														_rtfeldman$elm_css$Css$pct(-50)),
+													_1: {
+														ctor: '::',
+														_0: _rtfeldman$elm_css$Css$left(
+															_rtfeldman$elm_css$Css$pct(-50)),
+														_1: {
+															ctor: '::',
+															_0: _rtfeldman$elm_css$Css$width(
+																_rtfeldman$elm_css$Css$pct(200)),
+															_1: {
+																ctor: '::',
+																_0: _rtfeldman$elm_css$Css$height(
+																	_rtfeldman$elm_css$Css$pct(200)),
+																_1: {
+																	ctor: '::',
+																	_0: _rtfeldman$elm_css$Css$zIndex(
+																		_rtfeldman$elm_css$Css$int(-1)),
+																	_1: {
+																		ctor: '::',
+																		_0: _rtfeldman$elm_css$Css$children(
+																			{
+																				ctor: '::',
+																				_0: _rtfeldman$elm_css$Css_Elements$img(
+																					{
+																						ctor: '::',
+																						_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$absolute),
+																						_1: {
+																							ctor: '::',
+																							_0: _rtfeldman$elm_css$Css$top(_rtfeldman$elm_css$Css$zero),
+																							_1: {
+																								ctor: '::',
+																								_0: _rtfeldman$elm_css$Css$left(_rtfeldman$elm_css$Css$zero),
+																								_1: {
+																									ctor: '::',
+																									_0: _rtfeldman$elm_css$Css$right(_rtfeldman$elm_css$Css$zero),
+																									_1: {
+																										ctor: '::',
+																										_0: _rtfeldman$elm_css$Css$bottom(_rtfeldman$elm_css$Css$zero),
+																										_1: {
+																											ctor: '::',
+																											_0: _rtfeldman$elm_css$Css$margin(_rtfeldman$elm_css$Css$auto),
+																											_1: {
+																												ctor: '::',
+																												_0: _rtfeldman$elm_css$Css$minWidth(
+																													_rtfeldman$elm_css$Css$pct(50)),
+																												_1: {
+																													ctor: '::',
+																													_0: _rtfeldman$elm_css$Css$minHeight(
+																														_rtfeldman$elm_css$Css$pct(50)),
+																													_1: {ctor: '[]'}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						}
@@ -14674,6 +14759,16 @@ var _user$project$MyCss$css = function (_p0) {
 var _user$project$Bootstrap$toText = function (_p0) {
 	return _elm_lang$core$List$singleton(
 		_elm_lang$html$Html$text(_p0));
+};
+var _user$project$Bootstrap$mdImage = function (x) {
+	return A2(
+		_elm_lang$html$Html$img,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$src(x),
+			_1: {ctor: '[]'}
+		},
+		{ctor: '[]'});
 };
 var _user$project$Bootstrap$_p1 = _rtfeldman$elm_css_helpers$Html_CssHelpers$withNamespace(_user$project$MyCss$name);
 var _user$project$Bootstrap$id = _user$project$Bootstrap$_p1.id;
@@ -14746,6 +14841,25 @@ var _user$project$Bootstrap$mdMarkdown = _evancz$elm_markdown$Markdown$toHtml(
 			}),
 		_1: {ctor: '[]'}
 	});
+var _user$project$Bootstrap$mdBackgroundImage = function (x) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Bootstrap$class(
+				{
+					ctor: '::',
+					_0: _user$project$MyCss$BackgroundImage,
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _user$project$Bootstrap$mdImage(x),
+			_1: {ctor: '[]'}
+		});
+};
 
 var _user$project$RemoteData$Success = function (a) {
 	return {ctor: 'Success', _0: a};
@@ -14792,9 +14906,9 @@ var _user$project$RemoteData$update = F2(
 
 var _user$project$Page_Messages$NoOp = {ctor: 'NoOp'};
 
-var _user$project$Page_Models$Page = F2(
-	function (a, b) {
-		return {title: a, body: b};
+var _user$project$Page_Models$Page = F3(
+	function (a, b, c) {
+		return {title: a, body: b, field_image: c};
 	});
 
 var _user$project$Messages$PageMsg = function (a) {
@@ -14804,11 +14918,12 @@ var _user$project$Messages$OnFetchPage = function (a) {
 	return {ctor: 'OnFetchPage', _0: a};
 };
 
-var _user$project$Page_Commands$pageDecoder = A3(
-	_elm_lang$core$Json_Decode$map2,
+var _user$project$Page_Commands$pageDecoder = A4(
+	_elm_lang$core$Json_Decode$map3,
 	_user$project$Page_Models$Page,
 	A2(_elm_lang$core$Json_Decode$field, 'title', _elm_lang$core$Json_Decode$string),
-	A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string));
+	A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string),
+	A2(_elm_lang$core$Json_Decode$field, 'field_image', _elm_lang$core$Json_Decode$string));
 
 var _user$project$Commands$fetchPageUrl = 'http://localhost:8080/web/api/pages/16';
 var _user$project$Commands$fetchPage = A2(
@@ -14832,7 +14947,11 @@ var _user$project$Page_View$page = function (x) {
 			_1: {
 				ctor: '::',
 				_0: _user$project$Bootstrap$mdMarkdown(x.body),
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: _user$project$Bootstrap$mdBackgroundImage(x.field_image),
+					_1: {ctor: '[]'}
+				}
 			}
 		});
 };

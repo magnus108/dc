@@ -1,4 +1,5 @@
 var _user$project$MyCss$name = 'bootstrap';
+var _user$project$MyCss$BackgroundImage = {ctor: 'BackgroundImage'};
 var _user$project$MyCss$Markdown = {ctor: 'Markdown'};
 var _user$project$MyCss$Title = {ctor: 'Title'};
 var _user$project$MyCss$Column = {ctor: 'Column'};
@@ -100,7 +101,11 @@ var _user$project$MyCss$css = function (_p0) {
 									{
 										ctor: '::',
 										_0: _rtfeldman$elm_css$Css$color(_user$project$Colors$primaryTextColor),
-										_1: {ctor: '[]'}
+										_1: {
+											ctor: '::',
+											_0: _rtfeldman$elm_css$Css$backgroundColor(_user$project$Colors$primaryDarkColor),
+											_1: {ctor: '[]'}
+										}
 									}),
 								_1: {
 									ctor: '::',
@@ -112,7 +117,87 @@ var _user$project$MyCss$css = function (_p0) {
 											_0: _rtfeldman$elm_css$Css$backgroundColor(_user$project$Colors$primaryLightColor),
 											_1: {ctor: '[]'}
 										}),
-									_1: {ctor: '[]'}
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_rtfeldman$elm_css$Css$class,
+											_user$project$MyCss$BackgroundImage,
+											{
+												ctor: '::',
+												_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$fixed),
+												_1: {
+													ctor: '::',
+													_0: _rtfeldman$elm_css$Css$top(
+														_rtfeldman$elm_css$Css$pct(-50)),
+													_1: {
+														ctor: '::',
+														_0: _rtfeldman$elm_css$Css$left(
+															_rtfeldman$elm_css$Css$pct(-50)),
+														_1: {
+															ctor: '::',
+															_0: _rtfeldman$elm_css$Css$width(
+																_rtfeldman$elm_css$Css$pct(200)),
+															_1: {
+																ctor: '::',
+																_0: _rtfeldman$elm_css$Css$height(
+																	_rtfeldman$elm_css$Css$pct(200)),
+																_1: {
+																	ctor: '::',
+																	_0: _rtfeldman$elm_css$Css$zIndex(
+																		_rtfeldman$elm_css$Css$int(-1)),
+																	_1: {
+																		ctor: '::',
+																		_0: _rtfeldman$elm_css$Css$children(
+																			{
+																				ctor: '::',
+																				_0: _rtfeldman$elm_css$Css_Elements$img(
+																					{
+																						ctor: '::',
+																						_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$absolute),
+																						_1: {
+																							ctor: '::',
+																							_0: _rtfeldman$elm_css$Css$top(_rtfeldman$elm_css$Css$zero),
+																							_1: {
+																								ctor: '::',
+																								_0: _rtfeldman$elm_css$Css$left(_rtfeldman$elm_css$Css$zero),
+																								_1: {
+																									ctor: '::',
+																									_0: _rtfeldman$elm_css$Css$right(_rtfeldman$elm_css$Css$zero),
+																									_1: {
+																										ctor: '::',
+																										_0: _rtfeldman$elm_css$Css$bottom(_rtfeldman$elm_css$Css$zero),
+																										_1: {
+																											ctor: '::',
+																											_0: _rtfeldman$elm_css$Css$margin(_rtfeldman$elm_css$Css$auto),
+																											_1: {
+																												ctor: '::',
+																												_0: _rtfeldman$elm_css$Css$minWidth(
+																													_rtfeldman$elm_css$Css$pct(50)),
+																												_1: {
+																													ctor: '::',
+																													_0: _rtfeldman$elm_css$Css$minHeight(
+																														_rtfeldman$elm_css$Css$pct(50)),
+																													_1: {ctor: '[]'}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						}

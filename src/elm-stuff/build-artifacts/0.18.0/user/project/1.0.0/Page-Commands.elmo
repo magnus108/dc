@@ -1,5 +1,6 @@
-var _user$project$Page_Commands$pageDecoder = A3(
-	_elm_lang$core$Json_Decode$map2,
+var _user$project$Page_Commands$pageDecoder = A4(
+	_elm_lang$core$Json_Decode$map3,
 	_user$project$Page_Models$Page,
 	A2(_elm_lang$core$Json_Decode$field, 'title', _elm_lang$core$Json_Decode$string),
-	A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string));
+	A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string),
+	A2(_elm_lang$core$Json_Decode$field, 'field_image', _elm_lang$core$Json_Decode$string));

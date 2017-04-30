@@ -7,6 +7,7 @@ import Bootstrap
   ( mdContent
   , mdTitle
   , mdMarkdown
+  , mdBackgroundImage
   )
 
 
@@ -19,4 +20,5 @@ page x =
   mdContent
     [ mdTitle x.title
     , mdMarkdown x.body
+    , mdBackgroundImage x.field_image
     ]

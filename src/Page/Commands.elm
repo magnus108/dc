@@ -8,6 +8,7 @@ import Page.Models exposing (Page)
 
 pageDecoder : Decoder Page
 pageDecoder =
-  Decode.map2 Page
+  Decode.map3 Page
     (field "title" Decode.string)
     (field "body" Decode.string)
+    (field "field_image" Decode.string)

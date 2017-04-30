@@ -5,6 +5,7 @@ module Bootstrap
   , mdContent
   , mdTitle
   , mdMarkdown
+  , mdBackgroundImage
   )
 
 
@@ -13,6 +14,12 @@ import Html
     ( Html
     , div
     , h1
+    , img
+    )
+
+import Html.Attributes
+  exposing
+    ( src
     )
 
 import Markdown
@@ -49,6 +56,16 @@ mdTitle =
 mdMarkdown : String -> Html msg
 mdMarkdown =
   Markdown.toHtml [ class [ Markdown ] ]
+
+
+mdBackgroundImage : String -> Html msg
+mdBackgroundImage x =
+  div [ class [ BackgroundImage ] ] [ mdImage x ]
+
+
+mdImage : String -> Html msg
+mdImage x =
+  img [ src x ] []
 
 
 toText : String -> List (Html msg)
