@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_block_builder
+    - field.field.node.page.field_image
+    - image.style.thumbnail
     - node.type.page
   module:
     - gavias_blockbuilder
+    - image
     - path
     - text
 _core:
@@ -38,6 +41,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_image:
+    type: image_image
+    weight: 13
+    region: content
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
   gva_box_layout:
     type: options_select
     weight: 11
