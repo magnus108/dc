@@ -1,4 +1,3 @@
-# not sure about ./vendor
 version: '2'
 services:
   web:
@@ -7,18 +6,17 @@ services:
       - 8080:80
     volumes:
       - ./web:/var/www/html/web
-      - core-volume:/var/www/html/web/core
-      - libraries-volume:/var/www/html/web/libraries
-      - files-volume:/var/www/html/web/sites/default/files
-      - styles-volume:/var/www/html/web/sites/default/files/styles
-      - sync-volume:/var/www/html/web/sites/default/sync
-      - modules-contrib-volume:/var/www/html/web/modules/contrib
-      - profiles-contrib-volume:/var/www/html/web/profiles/contrib
-      - themes-contrib-volume:/var/www/html/web/themes/contrib
-      - drush-contrib-volume:/var/www/html/web/drush/contrib
-    depends_on:
-      - db
-    networks:
+      - /var/www/html/vendor
+      - /var/www/html/web/core
+      - /var/www/html/web/libraries
+      - /var/www/html/web/sites/default/files
+      - /var/www/html/web/sites/default/files/styles
+      - /var/www/html/web/sites/default/sync
+      - /var/www/html/web/modules/contrib
+      - /var/www/html/web/profiles/contrib
+      - /var/www/html/web/themes/contrib
+      - /var/www/html/web/drush/contrib
+    links:
       - db
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -31,9 +29,7 @@ services:
   db:
     image: mysql:8
     volumes:
-      - db-volume:/var/lib/mysql
-    networks:
-      - db
+      - /var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER: ${MYSQL_USER}
@@ -41,18 +37,3 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
     restart: always
-
-volumes:
-  core-volume:
-  libraries-volume:
-  files-volume:
-  styles-volume:
-  sync-volume:
-  modules-contrib-volume:
-  profiles-contrib-volume:
-  themes-contrib-volume:
-  drush-contrib-volume:
-  db-volume:
-
-networks:
-  db:
