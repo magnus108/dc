@@ -25,7 +25,7 @@ RUN { \
 ENV HOME=/var/www/html
 
 # install dependancies
-RUN apt-get update && apt-get install -y wget git mysql-client libmagickwand-dev imagemagick
+RUN apt-get update && apt-get install -y wget git mysql-client libmagickwand-dev imagemagick npm nodejs
 RUN pecl install imagick && docker-php-ext-enable imagick
 RUN wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -40,4 +40,9 @@ COPY web $HOME/web
 
 # have to change back to root user and install
 USER root
+
+RUN npm install -g elm elm-css
+
+RUN cd $HOME/web/sites/default/static/src && elm-css Stylesheets.elm --output ../ && elm-make Main.elm --output ../elm.js
+
 RUN chown -R www-data:www-data $HOME
