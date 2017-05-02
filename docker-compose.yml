@@ -16,6 +16,7 @@ services:
       - profiles-contrib-volume:/var/www/html/web/profiles/contrib
       - themes-contrib-volume:/var/www/html/web/themes/contrib
       - drush-contrib-volume:/var/www/html/web/drush/contrib
+      - static-volume:/var/www/html/web/sites/default/static
     links:
       - db
     environment:
@@ -50,3 +51,4 @@ volumes:
   themes-contrib-volume:
   drush-contrib-volume:
   db-volume:
+  static-volume:
