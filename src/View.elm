@@ -9,18 +9,18 @@ import Models exposing (Model)
 
 import Messages exposing (Msg(..))
 
-import Page.View
+import User.View
 
 
 view : Model -> Html Msg
 view model =
   div []
-    [ page model ]
+    [ users model ]
 
 
-page : Model -> Html Msg
-page model =
-  case model.page of
+users : Model -> Html Msg
+users model =
+  case model.users of
     NotAsked -> text "Starter"
 
     Loading -> text "Henter"
@@ -28,4 +28,4 @@ page model =
     Failure err -> text ("Error: " ++ toString err)
 
     Success x ->
-      Page.View.page x |> Html.map PageMsg
+      div [] ( List.map (\y -> User.View.user y |> Html.map UserMsg) x )

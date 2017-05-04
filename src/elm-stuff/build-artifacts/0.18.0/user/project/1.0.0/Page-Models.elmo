@@ -1,0 +1,4 @@
+var _user$project$Page_Models$Page = F3(
+	function (a, b, c) {
+		return {title: a, body: b, field_image: c};
+	});

@@ -1,0 +1,6 @@
+var _user$project$Models$initialCommands = _user$project$Commands$fetchPage;
+var _user$project$Models$initialModel = {users: _user$project$RemoteData$Loading};
+var _user$project$Models$init = {ctor: '_Tuple2', _0: _user$project$Models$initialModel, _1: _user$project$Models$initialCommands};
+var _user$project$Models$Model = function (a) {
+	return {users: a};
+};

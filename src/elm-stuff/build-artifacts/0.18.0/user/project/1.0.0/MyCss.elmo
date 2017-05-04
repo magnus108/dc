@@ -1,0 +1,208 @@
+var _user$project$MyCss$name = 'bootstrap';
+var _user$project$MyCss$BackgroundImage = {ctor: 'BackgroundImage'};
+var _user$project$MyCss$Markdown = {ctor: 'Markdown'};
+var _user$project$MyCss$Title = {ctor: 'Title'};
+var _user$project$MyCss$Column = {ctor: 'Column'};
+var _user$project$MyCss$Row = {ctor: 'Row'};
+var _user$project$MyCss$Flex = {ctor: 'Flex'};
+var _user$project$MyCss$MdContent = {ctor: 'MdContent'};
+var _user$project$MyCss$css = function (_p0) {
+	return _rtfeldman$elm_css$Css$stylesheet(
+		A2(_rtfeldman$elm_css$Css_Namespace$namespace, _user$project$MyCss$name, _p0));
+}(
+	{
+		ctor: '::',
+		_0: _rtfeldman$elm_css$Css_Elements$html(
+			{
+				ctor: '::',
+				_0: _rtfeldman$elm_css$Css$height(
+					_rtfeldman$elm_css$Css$pct(100)),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _rtfeldman$elm_css$Css_Elements$body(
+				{
+					ctor: '::',
+					_0: _rtfeldman$elm_css$Css$displayFlex,
+					_1: {
+						ctor: '::',
+						_0: _rtfeldman$elm_css$Css$margin(_rtfeldman$elm_css$Css$zero),
+						_1: {
+							ctor: '::',
+							_0: _rtfeldman$elm_css$Css$height(
+								_rtfeldman$elm_css$Css$pct(100)),
+							_1: {ctor: '[]'}
+						}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_rtfeldman$elm_css$Css$class,
+					_user$project$MyCss$MdContent,
+					{
+						ctor: '::',
+						_0: _rtfeldman$elm_css$Css$flex(
+							_rtfeldman$elm_css$Css$int(8)),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_rtfeldman$elm_css$Css$padding2,
+								_rtfeldman$elm_css$Css$zero,
+								_rtfeldman$elm_css$Css$px(40)),
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_rtfeldman$elm_css$Css$class,
+						_user$project$MyCss$Flex,
+						{
+							ctor: '::',
+							_0: _rtfeldman$elm_css$Css$flex(
+								_rtfeldman$elm_css$Css$int(1)),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_rtfeldman$elm_css$Css$class,
+							_user$project$MyCss$Row,
+							{
+								ctor: '::',
+								_0: _rtfeldman$elm_css$Css$displayFlex,
+								_1: {
+									ctor: '::',
+									_0: A2(_rtfeldman$elm_css$Css$flexFlow2, _rtfeldman$elm_css$Css$noWrap, _rtfeldman$elm_css$Css$row),
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_rtfeldman$elm_css$Css$class,
+								_user$project$MyCss$Column,
+								{
+									ctor: '::',
+									_0: _rtfeldman$elm_css$Css$displayFlex,
+									_1: {
+										ctor: '::',
+										_0: A2(_rtfeldman$elm_css$Css$flexFlow2, _rtfeldman$elm_css$Css$noWrap, _rtfeldman$elm_css$Css$column),
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_rtfeldman$elm_css$Css$class,
+									_user$project$MyCss$Title,
+									{
+										ctor: '::',
+										_0: _rtfeldman$elm_css$Css$color(_user$project$Colors$primaryTextColor),
+										_1: {
+											ctor: '::',
+											_0: _rtfeldman$elm_css$Css$backgroundColor(_user$project$Colors$primaryDarkColor),
+											_1: {ctor: '[]'}
+										}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_rtfeldman$elm_css$Css$class,
+										_user$project$MyCss$Markdown,
+										{
+											ctor: '::',
+											_0: _rtfeldman$elm_css$Css$backgroundColor(_user$project$Colors$primaryLightColor),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_rtfeldman$elm_css$Css$class,
+											_user$project$MyCss$BackgroundImage,
+											{
+												ctor: '::',
+												_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$fixed),
+												_1: {
+													ctor: '::',
+													_0: _rtfeldman$elm_css$Css$top(
+														_rtfeldman$elm_css$Css$pct(-50)),
+													_1: {
+														ctor: '::',
+														_0: _rtfeldman$elm_css$Css$left(
+															_rtfeldman$elm_css$Css$pct(-50)),
+														_1: {
+															ctor: '::',
+															_0: _rtfeldman$elm_css$Css$width(
+																_rtfeldman$elm_css$Css$pct(200)),
+															_1: {
+																ctor: '::',
+																_0: _rtfeldman$elm_css$Css$height(
+																	_rtfeldman$elm_css$Css$pct(200)),
+																_1: {
+																	ctor: '::',
+																	_0: _rtfeldman$elm_css$Css$zIndex(
+																		_rtfeldman$elm_css$Css$int(-1)),
+																	_1: {
+																		ctor: '::',
+																		_0: _rtfeldman$elm_css$Css$children(
+																			{
+																				ctor: '::',
+																				_0: _rtfeldman$elm_css$Css_Elements$img(
+																					{
+																						ctor: '::',
+																						_0: _rtfeldman$elm_css$Css$position(_rtfeldman$elm_css$Css$absolute),
+																						_1: {
+																							ctor: '::',
+																							_0: _rtfeldman$elm_css$Css$top(_rtfeldman$elm_css$Css$zero),
+																							_1: {
+																								ctor: '::',
+																								_0: _rtfeldman$elm_css$Css$left(_rtfeldman$elm_css$Css$zero),
+																								_1: {
+																									ctor: '::',
+																									_0: _rtfeldman$elm_css$Css$right(_rtfeldman$elm_css$Css$zero),
+																									_1: {
+																										ctor: '::',
+																										_0: _rtfeldman$elm_css$Css$bottom(_rtfeldman$elm_css$Css$zero),
+																										_1: {
+																											ctor: '::',
+																											_0: _rtfeldman$elm_css$Css$margin(_rtfeldman$elm_css$Css$auto),
+																											_1: {
+																												ctor: '::',
+																												_0: _rtfeldman$elm_css$Css$minWidth(
+																													_rtfeldman$elm_css$Css$pct(50)),
+																												_1: {
+																													ctor: '::',
+																													_0: _rtfeldman$elm_css$Css$minHeight(
+																														_rtfeldman$elm_css$Css$pct(50)),
+																													_1: {ctor: '[]'}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});

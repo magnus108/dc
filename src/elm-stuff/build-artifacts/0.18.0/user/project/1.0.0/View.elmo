@@ -1,0 +1,38 @@
+var _user$project$View$users = function (model) {
+	var _p0 = model.users;
+	switch (_p0.ctor) {
+		case 'NotAsked':
+			return _elm_lang$html$Html$text('Starter');
+		case 'Loading':
+			return _elm_lang$html$Html$text('Henter');
+		case 'Failure':
+			return _elm_lang$html$Html$text(
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'Error: ',
+					_elm_lang$core$Basics$toString(_p0._0)));
+		default:
+			return A2(
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				A2(
+					_elm_lang$core$List$map,
+					function (y) {
+						return A2(
+							_elm_lang$html$Html$map,
+							_user$project$Messages$UserMsg,
+							_user$project$User_View$user(y));
+					},
+					_p0._0));
+	}
+};
+var _user$project$View$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _user$project$View$users(model),
+			_1: {ctor: '[]'}
+		});
+};

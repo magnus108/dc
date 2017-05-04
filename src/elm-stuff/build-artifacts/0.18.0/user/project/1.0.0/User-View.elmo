@@ -1,0 +1,8 @@
+var _user$project$User_View$user = function (x) {
+	return _user$project$Bootstrap$mdContent(
+		{
+			ctor: '::',
+			_0: _user$project$Bootstrap$mdTitle(x.name),
+			_1: {ctor: '[]'}
+		});
+};

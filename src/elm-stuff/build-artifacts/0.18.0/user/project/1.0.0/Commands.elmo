@@ -1,0 +1,7 @@
+var _user$project$Commands$fetchUsersUrl = 'http://localhost:8080/web/api/users';
+var _user$project$Commands$usersDecoder = _elm_lang$core$Json_Decode$list(_user$project$User_Commands$userDecoder);
+var _user$project$Commands$fetchPage = A2(
+	_elm_lang$core$Platform_Cmd$map,
+	_user$project$Messages$OnFetchUsers,
+	_user$project$RemoteData$sendRequest(
+		A2(_elm_lang$http$Http$get, _user$project$Commands$fetchUsersUrl, _user$project$Commands$usersDecoder)));
