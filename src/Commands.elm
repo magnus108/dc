@@ -15,9 +15,17 @@ import User.Commands exposing (userDecoder)
 
 fetchPage : Cmd Msg
 fetchPage =
-  Http.get fetchUsersUrl usersDecoder
-    |> RemoteData.sendRequest
-    |> Cmd.map OnFetchUsers
+  Http.request
+    { method = "GET"
+    , headers = []
+    , url = fetchUsersUrl
+    , body = Http.emptyBody
+    , expect = Http.expectJson usersDecoder
+    , timeout = Nothing
+    , withCredentials = True
+    }
+  |> RemoteData.sendRequest
+  |> Cmd.map OnFetchUsers
 
 
 usersDecoder : Decoder ( List User )

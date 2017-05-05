@@ -14930,7 +14930,16 @@ var _user$project$Commands$fetchPage = A2(
 	_elm_lang$core$Platform_Cmd$map,
 	_user$project$Messages$OnFetchUsers,
 	_user$project$RemoteData$sendRequest(
-		A2(_elm_lang$http$Http$get, _user$project$Commands$fetchUsersUrl, _user$project$Commands$usersDecoder)));
+		_elm_lang$http$Http$request(
+			{
+				method: 'GET',
+				headers: {ctor: '[]'},
+				url: _user$project$Commands$fetchUsersUrl,
+				body: _elm_lang$http$Http$emptyBody,
+				expect: _elm_lang$http$Http$expectJson(_user$project$Commands$usersDecoder),
+				timeout: _elm_lang$core$Maybe$Nothing,
+				withCredentials: true
+			})));
 
 var _user$project$Models$initialCommands = _user$project$Commands$fetchPage;
 var _user$project$Models$initialModel = {users: _user$project$RemoteData$Loading};
