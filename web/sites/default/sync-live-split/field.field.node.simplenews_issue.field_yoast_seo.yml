@@ -1,0 +1,21 @@
+uuid: a17b71fb-286a-4cdf-beab-752c9f28d5a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.simplenews_issue
+  module:
+    - yoast_seo
+id: node.simplenews_issue.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: simplenews_issue
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo
