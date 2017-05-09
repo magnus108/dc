@@ -5,7 +5,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./web:/var/www/html/web
+      - .:/var/www/html
       - vendor-volume:/var/www/html/vendor
       - core-volume:/var/www/html/web/core
       - libraries-volume:/var/www/html/web/libraries
