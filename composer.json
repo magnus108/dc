@@ -1,11 +1,14 @@
 {
     "name": "root/cchelp",
     "type": "project",
+    "minimum-stability" : "dev",
+    "prefer-stable" : true,
     "require": {
         "composer/installers": "^1.2",
         "drupal/core": "^8.3",
         "drush/drush": "^8.1",
-        "league/oauth2-server": "^5.1"
+        "league/oauth2-server": "^5.1",
+        "drupal/redirect": "^1.0@alpha"
     },
     "authors": [
         {
