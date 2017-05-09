@@ -3,6 +3,10 @@ var _user$project$User_View$user = function (x) {
 		{
 			ctor: '::',
 			_0: _user$project$Bootstrap$mdTitle(x.name),
-			_1: {ctor: '[]'}
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html$text(x.mail),
+				_1: {ctor: '[]'}
+			}
 		});
 };

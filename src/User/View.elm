@@ -17,4 +17,5 @@ user : User -> Html Msg
 user x =
   mdContent
     [ mdTitle x.name
+    , text x.mail
     ]

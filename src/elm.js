@@ -8860,6 +8860,129 @@ var _elm_lang$html$Html_Attributes$classList = function (list) {
 };
 var _elm_lang$html$Html_Attributes$style = _elm_lang$virtual_dom$VirtualDom$style;
 
+var _elm_lang$html$Html_Events$keyCode = A2(_elm_lang$core$Json_Decode$field, 'keyCode', _elm_lang$core$Json_Decode$int);
+var _elm_lang$html$Html_Events$targetChecked = A2(
+	_elm_lang$core$Json_Decode$at,
+	{
+		ctor: '::',
+		_0: 'target',
+		_1: {
+			ctor: '::',
+			_0: 'checked',
+			_1: {ctor: '[]'}
+		}
+	},
+	_elm_lang$core$Json_Decode$bool);
+var _elm_lang$html$Html_Events$targetValue = A2(
+	_elm_lang$core$Json_Decode$at,
+	{
+		ctor: '::',
+		_0: 'target',
+		_1: {
+			ctor: '::',
+			_0: 'value',
+			_1: {ctor: '[]'}
+		}
+	},
+	_elm_lang$core$Json_Decode$string);
+var _elm_lang$html$Html_Events$defaultOptions = _elm_lang$virtual_dom$VirtualDom$defaultOptions;
+var _elm_lang$html$Html_Events$onWithOptions = _elm_lang$virtual_dom$VirtualDom$onWithOptions;
+var _elm_lang$html$Html_Events$on = _elm_lang$virtual_dom$VirtualDom$on;
+var _elm_lang$html$Html_Events$onFocus = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'focus',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onBlur = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'blur',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onSubmitOptions = _elm_lang$core$Native_Utils.update(
+	_elm_lang$html$Html_Events$defaultOptions,
+	{preventDefault: true});
+var _elm_lang$html$Html_Events$onSubmit = function (msg) {
+	return A3(
+		_elm_lang$html$Html_Events$onWithOptions,
+		'submit',
+		_elm_lang$html$Html_Events$onSubmitOptions,
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onCheck = function (tagger) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'change',
+		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$targetChecked));
+};
+var _elm_lang$html$Html_Events$onInput = function (tagger) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'input',
+		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$targetValue));
+};
+var _elm_lang$html$Html_Events$onMouseOut = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseout',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseOver = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseover',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseLeave = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseleave',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseEnter = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseenter',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseUp = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseup',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseDown = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mousedown',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onDoubleClick = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'dblclick',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onClick = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'click',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$Options = F2(
+	function (a, b) {
+		return {stopPropagation: a, preventDefault: b};
+	});
+
+var _elm_lang$html$Html_Keyed$node = _elm_lang$virtual_dom$VirtualDom$keyedNode;
+var _elm_lang$html$Html_Keyed$ol = _elm_lang$html$Html_Keyed$node('ol');
+var _elm_lang$html$Html_Keyed$ul = _elm_lang$html$Html_Keyed$node('ul');
+
+var _elm_lang$html$Html_Lazy$lazy3 = _elm_lang$virtual_dom$VirtualDom$lazy3;
+var _elm_lang$html$Html_Lazy$lazy2 = _elm_lang$virtual_dom$VirtualDom$lazy2;
+var _elm_lang$html$Html_Lazy$lazy = _elm_lang$virtual_dom$VirtualDom$lazy;
+
 var _elm_lang$http$Native_Http = function() {
 
 
@@ -14904,6 +15027,480 @@ var _user$project$RemoteData$update = F2(
 		}
 	});
 
+var _user$project$Table$findSorter = F2(
+	function (selectedColumn, columnData) {
+		findSorter:
+		while (true) {
+			var _p0 = columnData;
+			if (_p0.ctor === '[]') {
+				return _elm_lang$core$Maybe$Nothing;
+			} else {
+				if (_elm_lang$core$Native_Utils.eq(_p0._0.name, selectedColumn)) {
+					return _elm_lang$core$Maybe$Just(_p0._0.sorter);
+				} else {
+					var _v1 = selectedColumn,
+						_v2 = _p0._1;
+					selectedColumn = _v1;
+					columnData = _v2;
+					continue findSorter;
+				}
+			}
+		}
+	});
+var _user$project$Table$applySorter = F3(
+	function (isReversed, sorter, data) {
+		var _p1 = sorter;
+		switch (_p1.ctor) {
+			case 'None':
+				return data;
+			case 'Increasing':
+				return _p1._0(data);
+			case 'Decreasing':
+				return _elm_lang$core$List$reverse(
+					_p1._0(data));
+			case 'IncOrDec':
+				var _p2 = _p1._0;
+				return isReversed ? _elm_lang$core$List$reverse(
+					_p2(data)) : _p2(data);
+			default:
+				var _p3 = _p1._0;
+				return isReversed ? _p3(data) : _elm_lang$core$List$reverse(
+					_p3(data));
+		}
+	});
+var _user$project$Table$sort = F3(
+	function (_p4, columnData, data) {
+		var _p5 = _p4;
+		var _p6 = A2(_user$project$Table$findSorter, _p5._0, columnData);
+		if (_p6.ctor === 'Nothing') {
+			return data;
+		} else {
+			return A3(_user$project$Table$applySorter, _p5._1, _p6._0, data);
+		}
+	});
+var _user$project$Table$viewCell = F2(
+	function (data, _p7) {
+		var _p8 = _p7;
+		var details = _p8.viewData(data);
+		return A2(_elm_lang$html$Html$td, details.attributes, details.children);
+	});
+var _user$project$Table$viewRowHelp = F3(
+	function (columns, toRowAttrs, data) {
+		return A2(
+			_elm_lang$html$Html$tr,
+			toRowAttrs(data),
+			A2(
+				_elm_lang$core$List$map,
+				_user$project$Table$viewCell(data),
+				columns));
+	});
+var _user$project$Table$viewRow = F4(
+	function (toId, columns, toRowAttrs, data) {
+		return {
+			ctor: '_Tuple2',
+			_0: toId(data),
+			_1: A4(_elm_lang$html$Html_Lazy$lazy3, _user$project$Table$viewRowHelp, columns, toRowAttrs, data)
+		};
+	});
+var _user$project$Table$simpleRowAttrs = function (_p9) {
+	return {ctor: '[]'};
+};
+var _user$project$Table$lightGrey = function (symbol) {
+	return A2(
+		_elm_lang$html$Html$span,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$style(
+				{
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'color', _1: '#ccc'},
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(
+				A2(_elm_lang$core$Basics_ops['++'], ' ', symbol)),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Table$darkGrey = function (symbol) {
+	return A2(
+		_elm_lang$html$Html$span,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$style(
+				{
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'color', _1: '#555'},
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(
+				A2(_elm_lang$core$Basics_ops['++'], ' ', symbol)),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Table$simpleTheadHelp = function (_p10) {
+	var _p11 = _p10;
+	var _p13 = _p11._0;
+	var content = function () {
+		var _p12 = _p11._1;
+		switch (_p12.ctor) {
+			case 'Unsortable':
+				return {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(_p13),
+					_1: {ctor: '[]'}
+				};
+			case 'Sortable':
+				return {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(_p13),
+					_1: {
+						ctor: '::',
+						_0: _p12._0 ? _user$project$Table$darkGrey('↓') : _user$project$Table$lightGrey('↓'),
+						_1: {ctor: '[]'}
+					}
+				};
+			default:
+				if (_p12._0.ctor === 'Nothing') {
+					return {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p13),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Table$lightGrey('↕'),
+							_1: {ctor: '[]'}
+						}
+					};
+				} else {
+					return {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p13),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Table$darkGrey(
+								_p12._0._0 ? '↑' : '↓'),
+							_1: {ctor: '[]'}
+						}
+					};
+				}
+		}
+	}();
+	return A2(
+		_elm_lang$html$Html$th,
+		{
+			ctor: '::',
+			_0: _p11._2,
+			_1: {ctor: '[]'}
+		},
+		content);
+};
+var _user$project$Table$Customizations = F6(
+	function (a, b, c, d, e, f) {
+		return {tableAttrs: a, caption: b, thead: c, tfoot: d, tbodyAttrs: e, rowAttrs: f};
+	});
+var _user$project$Table$HtmlDetails = F2(
+	function (a, b) {
+		return {attributes: a, children: b};
+	});
+var _user$project$Table$simpleThead = function (headers) {
+	return A2(
+		_user$project$Table$HtmlDetails,
+		{ctor: '[]'},
+		A2(_elm_lang$core$List$map, _user$project$Table$simpleTheadHelp, headers));
+};
+var _user$project$Table$defaultCustomizations = {
+	tableAttrs: {ctor: '[]'},
+	caption: _elm_lang$core$Maybe$Nothing,
+	thead: _user$project$Table$simpleThead,
+	tfoot: _elm_lang$core$Maybe$Nothing,
+	tbodyAttrs: {ctor: '[]'},
+	rowAttrs: _user$project$Table$simpleRowAttrs
+};
+var _user$project$Table$textDetails = function (str) {
+	return A2(
+		_user$project$Table$HtmlDetails,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(str),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Table$ColumnData = F3(
+	function (a, b, c) {
+		return {name: a, viewData: b, sorter: c};
+	});
+var _user$project$Table$State = F2(
+	function (a, b) {
+		return {ctor: 'State', _0: a, _1: b};
+	});
+var _user$project$Table$initialSort = function (header) {
+	return A2(_user$project$Table$State, header, false);
+};
+var _user$project$Table$onClick = F3(
+	function (name, isReversed, toMsg) {
+		return A2(
+			_elm_lang$html$Html_Events$on,
+			'click',
+			A2(
+				_elm_lang$core$Json_Decode$map,
+				toMsg,
+				A3(
+					_elm_lang$core$Json_Decode$map2,
+					_user$project$Table$State,
+					_elm_lang$core$Json_Decode$succeed(name),
+					_elm_lang$core$Json_Decode$succeed(isReversed))));
+	});
+var _user$project$Table$Config = function (a) {
+	return {ctor: 'Config', _0: a};
+};
+var _user$project$Table$config = function (_p14) {
+	var _p15 = _p14;
+	return _user$project$Table$Config(
+		{
+			toId: _p15.toId,
+			toMsg: _p15.toMsg,
+			columns: A2(
+				_elm_lang$core$List$map,
+				function (_p16) {
+					var _p17 = _p16;
+					return _p17._0;
+				},
+				_p15.columns),
+			customizations: _user$project$Table$defaultCustomizations
+		});
+};
+var _user$project$Table$customConfig = function (_p18) {
+	var _p19 = _p18;
+	return _user$project$Table$Config(
+		{
+			toId: _p19.toId,
+			toMsg: _p19.toMsg,
+			columns: A2(
+				_elm_lang$core$List$map,
+				function (_p20) {
+					var _p21 = _p20;
+					return _p21._0;
+				},
+				_p19.columns),
+			customizations: _p19.customizations
+		});
+};
+var _user$project$Table$Reversible = function (a) {
+	return {ctor: 'Reversible', _0: a};
+};
+var _user$project$Table$Sortable = function (a) {
+	return {ctor: 'Sortable', _0: a};
+};
+var _user$project$Table$Unsortable = {ctor: 'Unsortable'};
+var _user$project$Table$toHeaderInfo = F3(
+	function (_p23, toMsg, _p22) {
+		var _p24 = _p23;
+		var _p29 = _p24._0;
+		var _p28 = _p24._1;
+		var _p25 = _p22;
+		var _p27 = _p25.name;
+		var _p26 = _p25.sorter;
+		switch (_p26.ctor) {
+			case 'None':
+				return {
+					ctor: '_Tuple3',
+					_0: _p27,
+					_1: _user$project$Table$Unsortable,
+					_2: A3(_user$project$Table$onClick, _p29, _p28, toMsg)
+				};
+			case 'Increasing':
+				return {
+					ctor: '_Tuple3',
+					_0: _p27,
+					_1: _user$project$Table$Sortable(
+						_elm_lang$core$Native_Utils.eq(_p27, _p29)),
+					_2: A3(_user$project$Table$onClick, _p27, false, toMsg)
+				};
+			case 'Decreasing':
+				return {
+					ctor: '_Tuple3',
+					_0: _p27,
+					_1: _user$project$Table$Sortable(
+						_elm_lang$core$Native_Utils.eq(_p27, _p29)),
+					_2: A3(_user$project$Table$onClick, _p27, false, toMsg)
+				};
+			case 'IncOrDec':
+				return _elm_lang$core$Native_Utils.eq(_p27, _p29) ? {
+					ctor: '_Tuple3',
+					_0: _p27,
+					_1: _user$project$Table$Reversible(
+						_elm_lang$core$Maybe$Just(_p28)),
+					_2: A3(_user$project$Table$onClick, _p27, !_p28, toMsg)
+				} : {
+					ctor: '_Tuple3',
+					_0: _p27,
+					_1: _user$project$Table$Reversible(_elm_lang$core$Maybe$Nothing),
+					_2: A3(_user$project$Table$onClick, _p27, false, toMsg)
+				};
+			default:
+				return _elm_lang$core$Native_Utils.eq(_p27, _p29) ? {
+					ctor: '_Tuple3',
+					_0: _p27,
+					_1: _user$project$Table$Reversible(
+						_elm_lang$core$Maybe$Just(_p28)),
+					_2: A3(_user$project$Table$onClick, _p27, !_p28, toMsg)
+				} : {
+					ctor: '_Tuple3',
+					_0: _p27,
+					_1: _user$project$Table$Reversible(_elm_lang$core$Maybe$Nothing),
+					_2: A3(_user$project$Table$onClick, _p27, false, toMsg)
+				};
+		}
+	});
+var _user$project$Table$view = F3(
+	function (_p30, state, data) {
+		var _p31 = _p30;
+		var _p35 = _p31._0.customizations;
+		var _p34 = _p31._0.columns;
+		var theadDetails = _p35.thead(
+			A2(
+				_elm_lang$core$List$map,
+				A2(_user$project$Table$toHeaderInfo, state, _p31._0.toMsg),
+				_p34));
+		var thead = A2(_elm_lang$html$Html$thead, theadDetails.attributes, theadDetails.children);
+		var sortedData = A3(_user$project$Table$sort, state, _p34, data);
+		var tbody = A3(
+			_elm_lang$html$Html_Keyed$node,
+			'tbody',
+			_p35.tbodyAttrs,
+			A2(
+				_elm_lang$core$List$map,
+				A3(_user$project$Table$viewRow, _p31._0.toId, _p34, _p35.rowAttrs),
+				sortedData));
+		var withFoot = function () {
+			var _p32 = _p35.tfoot;
+			if (_p32.ctor === 'Nothing') {
+				return {
+					ctor: '::',
+					_0: tbody,
+					_1: {ctor: '[]'}
+				};
+			} else {
+				return {
+					ctor: '::',
+					_0: A2(_elm_lang$html$Html$tfoot, _p32._0.attributes, _p32._0.children),
+					_1: {
+						ctor: '::',
+						_0: tbody,
+						_1: {ctor: '[]'}
+					}
+				};
+			}
+		}();
+		return A2(
+			_elm_lang$html$Html$table,
+			_p35.tableAttrs,
+			function () {
+				var _p33 = _p35.caption;
+				if (_p33.ctor === 'Nothing') {
+					return {ctor: '::', _0: thead, _1: withFoot};
+				} else {
+					return {
+						ctor: '::',
+						_0: A2(_elm_lang$html$Html$caption, _p33._0.attributes, _p33._0.children),
+						_1: {ctor: '::', _0: thead, _1: withFoot}
+					};
+				}
+			}());
+	});
+var _user$project$Table$Column = function (a) {
+	return {ctor: 'Column', _0: a};
+};
+var _user$project$Table$customColumn = function (_p36) {
+	var _p37 = _p36;
+	return _user$project$Table$Column(
+		A3(
+			_user$project$Table$ColumnData,
+			_p37.name,
+			function (_p38) {
+				return _user$project$Table$textDetails(
+					_p37.viewData(_p38));
+			},
+			_p37.sorter));
+};
+var _user$project$Table$veryCustomColumn = _user$project$Table$Column;
+var _user$project$Table$DecOrInc = function (a) {
+	return {ctor: 'DecOrInc', _0: a};
+};
+var _user$project$Table$decreasingOrIncreasingBy = function (toComparable) {
+	return _user$project$Table$DecOrInc(
+		_elm_lang$core$List$sortBy(toComparable));
+};
+var _user$project$Table$IncOrDec = function (a) {
+	return {ctor: 'IncOrDec', _0: a};
+};
+var _user$project$Table$increasingOrDecreasingBy = function (toComparable) {
+	return _user$project$Table$IncOrDec(
+		_elm_lang$core$List$sortBy(toComparable));
+};
+var _user$project$Table$stringColumn = F2(
+	function (name, toStr) {
+		return _user$project$Table$Column(
+			{
+				name: name,
+				viewData: function (_p39) {
+					return _user$project$Table$textDetails(
+						toStr(_p39));
+				},
+				sorter: _user$project$Table$increasingOrDecreasingBy(toStr)
+			});
+	});
+var _user$project$Table$intColumn = F2(
+	function (name, toInt) {
+		return _user$project$Table$Column(
+			{
+				name: name,
+				viewData: function (_p40) {
+					return _user$project$Table$textDetails(
+						_elm_lang$core$Basics$toString(
+							toInt(_p40)));
+				},
+				sorter: _user$project$Table$increasingOrDecreasingBy(toInt)
+			});
+	});
+var _user$project$Table$floatColumn = F2(
+	function (name, toFloat) {
+		return _user$project$Table$Column(
+			{
+				name: name,
+				viewData: function (_p41) {
+					return _user$project$Table$textDetails(
+						_elm_lang$core$Basics$toString(
+							toFloat(_p41)));
+				},
+				sorter: _user$project$Table$increasingOrDecreasingBy(toFloat)
+			});
+	});
+var _user$project$Table$Decreasing = function (a) {
+	return {ctor: 'Decreasing', _0: a};
+};
+var _user$project$Table$decreasingBy = function (toComparable) {
+	return _user$project$Table$Decreasing(
+		_elm_lang$core$List$sortBy(toComparable));
+};
+var _user$project$Table$Increasing = function (a) {
+	return {ctor: 'Increasing', _0: a};
+};
+var _user$project$Table$increasingBy = function (toComparable) {
+	return _user$project$Table$Increasing(
+		_elm_lang$core$List$sortBy(toComparable));
+};
+var _user$project$Table$None = {ctor: 'None'};
+var _user$project$Table$unsortable = _user$project$Table$None;
+
 var _user$project$User_Messages$NoOp = {ctor: 'NoOp'};
 
 var _user$project$User_Models$User = F2(
@@ -14911,6 +15508,9 @@ var _user$project$User_Models$User = F2(
 		return {name: a, mail: b};
 	});
 
+var _user$project$Messages$SetTableState = function (a) {
+	return {ctor: 'SetTableState', _0: a};
+};
 var _user$project$Messages$UserMsg = function (a) {
 	return {ctor: 'UserMsg', _0: a};
 };
@@ -14942,24 +15542,119 @@ var _user$project$Commands$fetchPage = A2(
 			})));
 
 var _user$project$Models$initialCommands = _user$project$Commands$fetchPage;
-var _user$project$Models$initialModel = {users: _user$project$RemoteData$Loading};
-var _user$project$Models$init = {ctor: '_Tuple2', _0: _user$project$Models$initialModel, _1: _user$project$Models$initialCommands};
-var _user$project$Models$Model = function (a) {
-	return {users: a};
+var _user$project$Models$initialModel = {
+	users: _user$project$RemoteData$Loading,
+	tableState: _user$project$Table$initialSort('name')
 };
+var _user$project$Models$init = {ctor: '_Tuple2', _0: _user$project$Models$initialModel, _1: _user$project$Models$initialCommands};
+var _user$project$Models$Model = F2(
+	function (a, b) {
+		return {users: a, tableState: b};
+	});
 
 var _user$project$User_View$user = function (x) {
 	return _user$project$Bootstrap$mdContent(
 		{
 			ctor: '::',
 			_0: _user$project$Bootstrap$mdTitle(x.name),
-			_1: {ctor: '[]'}
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html$text(x.mail),
+				_1: {ctor: '[]'}
+			}
 		});
 };
 
+var _user$project$View$simpleRowAttrs = function (_p0) {
+	return {ctor: '[]'};
+};
+var _user$project$View$simpleTheadHelp = function (_p1) {
+	var _p2 = _p1;
+	var _p4 = _p2._0;
+	var content = function () {
+		var _p3 = _p2._1;
+		switch (_p3.ctor) {
+			case 'Unsortable':
+				return {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(_p4),
+					_1: {ctor: '[]'}
+				};
+			case 'Sortable':
+				return {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(_p4),
+					_1: {ctor: '[]'}
+				};
+			default:
+				if (_p3._0.ctor === 'Nothing') {
+					return {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p4),
+						_1: {ctor: '[]'}
+					};
+				} else {
+					return {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p4),
+						_1: {ctor: '[]'}
+					};
+				}
+		}
+	}();
+	return A2(
+		_elm_lang$html$Html$th,
+		{
+			ctor: '::',
+			_0: _p2._2,
+			_1: {ctor: '[]'}
+		},
+		content);
+};
+var _user$project$View$simpleThead = function (headers) {
+	return A2(
+		_user$project$Table$HtmlDetails,
+		{ctor: '[]'},
+		A2(_elm_lang$core$List$map, _user$project$View$simpleTheadHelp, headers));
+};
+var _user$project$View$customizations = {
+	tableAttrs: {ctor: '[]'},
+	caption: _elm_lang$core$Maybe$Nothing,
+	thead: _user$project$View$simpleThead,
+	tfoot: _elm_lang$core$Maybe$Nothing,
+	tbodyAttrs: {ctor: '[]'},
+	rowAttrs: _user$project$View$simpleRowAttrs
+};
+var _user$project$View$config = _user$project$Table$customConfig(
+	{
+		toId: function (_) {
+			return _.name;
+		},
+		toMsg: _user$project$Messages$SetTableState,
+		columns: {
+			ctor: '::',
+			_0: A2(
+				_user$project$Table$stringColumn,
+				'Name',
+				function (_) {
+					return _.name;
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_user$project$Table$stringColumn,
+					'Mail',
+					function (_) {
+						return _.mail;
+					}),
+				_1: {ctor: '[]'}
+			}
+		},
+		customizations: _user$project$View$customizations
+	});
 var _user$project$View$users = function (model) {
-	var _p0 = model.users;
-	switch (_p0.ctor) {
+	var _p5 = model.users;
+	switch (_p5.ctor) {
 		case 'NotAsked':
 			return _elm_lang$html$Html$text('Starter');
 		case 'Loading':
@@ -14969,20 +15664,9 @@ var _user$project$View$users = function (model) {
 				A2(
 					_elm_lang$core$Basics_ops['++'],
 					'Error: ',
-					_elm_lang$core$Basics$toString(_p0._0)));
+					_elm_lang$core$Basics$toString(_p5._0)));
 		default:
-			return A2(
-				_elm_lang$html$Html$div,
-				{ctor: '[]'},
-				A2(
-					_elm_lang$core$List$map,
-					function (y) {
-						return A2(
-							_elm_lang$html$Html$map,
-							_user$project$Messages$UserMsg,
-							_user$project$User_View$user(y));
-					},
-					_p0._0));
+			return A3(_user$project$Table$view, _user$project$View$config, model.tableState, _p5._0);
 	}
 };
 var _user$project$View$view = function (model) {
@@ -15005,16 +15689,25 @@ var _user$project$User_Update$update = F2(
 var _user$project$Update$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
-		if (_p0.ctor === 'OnFetchUsers') {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
-					model,
-					{users: _p0._0}),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
-		} else {
-			return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+		switch (_p0.ctor) {
+			case 'OnFetchUsers':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{users: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'UserMsg':
+				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+			default:
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{tableState: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
 		}
 	});
 

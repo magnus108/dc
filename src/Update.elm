@@ -18,11 +18,6 @@ update msg model =
 
     UserMsg subMsg ->
       ( model , Cmd.none )
-      {-
-      let
-        (newUsers, cmds) =
-          RemoteData.update (UU.update subMsg) model.users
-      in
-        { model | users = newUsers }
-          ! [ Cmd.map UserMsg cmds ]
-      -}
+
+    SetTableState newState ->
+      ( { model | tableState = newState }, Cmd.none )
