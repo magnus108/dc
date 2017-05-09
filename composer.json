@@ -22,5 +22,11 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "web/drush/contrib/{$name}": ["type:drupal-drush"]
         }
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
     }
 }
