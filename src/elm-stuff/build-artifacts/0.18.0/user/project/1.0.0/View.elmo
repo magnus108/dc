@@ -1,3 +1,10 @@
+var _user$project$View$failure = function (err) {
+	return _elm_lang$html$Html$text(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			'Error: ',
+			_elm_lang$core$Basics$toString(err)));
+};
 var _user$project$View$simpleRowAttrs = function (_p0) {
 	return {ctor: '[]'};
 };
@@ -85,22 +92,24 @@ var _user$project$View$config = _user$project$Table$customConfig(
 		},
 		customizations: _user$project$View$customizations
 	});
+var _user$project$View$success = F2(
+	function (model, x) {
+		return A3(_user$project$Table$view, _user$project$View$config, model.tableState, x);
+	});
+var _user$project$View$userConfig = function (model) {
+	return _user$project$RemoteData$Config(
+		{
+			success: _user$project$View$success(model),
+			notAsked: _elm_lang$html$Html$text('Starter'),
+			loading: _elm_lang$html$Html$text('Henter'),
+			failure: _user$project$View$failure
+		});
+};
 var _user$project$View$users = function (model) {
-	var _p5 = model.users;
-	switch (_p5.ctor) {
-		case 'NotAsked':
-			return _elm_lang$html$Html$text('Starter');
-		case 'Loading':
-			return _elm_lang$html$Html$text('Henter');
-		case 'Failure':
-			return _elm_lang$html$Html$text(
-				A2(
-					_elm_lang$core$Basics_ops['++'],
-					'Error: ',
-					_elm_lang$core$Basics$toString(_p5._0)));
-		default:
-			return A3(_user$project$Table$view, _user$project$View$config, model.tableState, _p5._0);
-	}
+	return A2(
+		_user$project$RemoteData$view,
+		_user$project$View$userConfig(model),
+		model.users);
 };
 var _user$project$View$view = function (model) {
 	return A2(

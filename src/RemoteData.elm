@@ -4,10 +4,13 @@ module RemoteData
     , WebData
     , sendRequest
     , update
+    , Config(..)
+    , view
     )
 
-
 import Http
+
+import Html exposing (Html)
 
 
 type RemoteData e a
@@ -54,3 +57,28 @@ update f remoteData =
 
     Failure error ->
       ( Failure error, Cmd.none )
+
+
+type Config msg e a =
+  Config
+    { success : a -> Html msg
+    , notAsked : Html msg
+    , loading : Html msg
+    , failure : e -> Html msg
+    }
+
+
+view : Config msg e a -> RemoteData e a -> Html msg
+view (Config { success, notAsked, loading, failure }) remoteData =
+  case remoteData of
+    NotAsked ->
+      notAsked
+
+    Loading ->
+      loading
+
+    Failure err ->
+      failure err
+
+    Success x ->
+      success x

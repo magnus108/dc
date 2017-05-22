@@ -14984,6 +14984,21 @@ var _user$project$Bootstrap$mdBackgroundImage = function (x) {
 		});
 };
 
+var _user$project$RemoteData$view = F2(
+	function (_p0, remoteData) {
+		var _p1 = _p0;
+		var _p2 = remoteData;
+		switch (_p2.ctor) {
+			case 'NotAsked':
+				return _p1._0.notAsked;
+			case 'Loading':
+				return _p1._0.loading;
+			case 'Failure':
+				return _p1._0.failure(_p2._0);
+			default:
+				return _p1._0.success(_p2._0);
+		}
+	});
 var _user$project$RemoteData$Success = function (a) {
 	return {ctor: 'Success', _0: a};
 };
@@ -14991,11 +15006,11 @@ var _user$project$RemoteData$Failure = function (a) {
 	return {ctor: 'Failure', _0: a};
 };
 var _user$project$RemoteData$fromResult = function (result) {
-	var _p0 = result;
-	if (_p0.ctor === 'Err') {
-		return _user$project$RemoteData$Failure(_p0._0);
+	var _p3 = result;
+	if (_p3.ctor === 'Err') {
+		return _user$project$RemoteData$Failure(_p3._0);
 	} else {
-		return _user$project$RemoteData$Success(_p0._0);
+		return _user$project$RemoteData$Success(_p3._0);
 	}
 };
 var _user$project$RemoteData$sendRequest = _elm_lang$http$Http$send(_user$project$RemoteData$fromResult);
@@ -15003,12 +15018,12 @@ var _user$project$RemoteData$Loading = {ctor: 'Loading'};
 var _user$project$RemoteData$NotAsked = {ctor: 'NotAsked'};
 var _user$project$RemoteData$update = F2(
 	function (f, remoteData) {
-		var _p1 = remoteData;
-		switch (_p1.ctor) {
+		var _p4 = remoteData;
+		switch (_p4.ctor) {
 			case 'Success':
-				var _p2 = f(_p1._0);
-				var first = _p2._0;
-				var second = _p2._1;
+				var _p5 = f(_p4._0);
+				var first = _p5._0;
+				var second = _p5._1;
 				return {
 					ctor: '_Tuple2',
 					_0: _user$project$RemoteData$Success(first),
@@ -15021,11 +15036,14 @@ var _user$project$RemoteData$update = F2(
 			default:
 				return {
 					ctor: '_Tuple2',
-					_0: _user$project$RemoteData$Failure(_p1._0),
+					_0: _user$project$RemoteData$Failure(_p4._0),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 		}
 	});
+var _user$project$RemoteData$Config = function (a) {
+	return {ctor: 'Config', _0: a};
+};
 
 var _user$project$Table$findSorter = F2(
 	function (selectedColumn, columnData) {
@@ -15565,6 +15583,13 @@ var _user$project$User_View$user = function (x) {
 		});
 };
 
+var _user$project$View$failure = function (err) {
+	return _elm_lang$html$Html$text(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			'Error: ',
+			_elm_lang$core$Basics$toString(err)));
+};
 var _user$project$View$simpleRowAttrs = function (_p0) {
 	return {ctor: '[]'};
 };
@@ -15652,22 +15677,24 @@ var _user$project$View$config = _user$project$Table$customConfig(
 		},
 		customizations: _user$project$View$customizations
 	});
+var _user$project$View$success = F2(
+	function (model, x) {
+		return A3(_user$project$Table$view, _user$project$View$config, model.tableState, x);
+	});
+var _user$project$View$userConfig = function (model) {
+	return _user$project$RemoteData$Config(
+		{
+			success: _user$project$View$success(model),
+			notAsked: _elm_lang$html$Html$text('Starter'),
+			loading: _elm_lang$html$Html$text('Henter'),
+			failure: _user$project$View$failure
+		});
+};
 var _user$project$View$users = function (model) {
-	var _p5 = model.users;
-	switch (_p5.ctor) {
-		case 'NotAsked':
-			return _elm_lang$html$Html$text('Starter');
-		case 'Loading':
-			return _elm_lang$html$Html$text('Henter');
-		case 'Failure':
-			return _elm_lang$html$Html$text(
-				A2(
-					_elm_lang$core$Basics_ops['++'],
-					'Error: ',
-					_elm_lang$core$Basics$toString(_p5._0)));
-		default:
-			return A3(_user$project$Table$view, _user$project$View$config, model.tableState, _p5._0);
-	}
+	return A2(
+		_user$project$RemoteData$view,
+		_user$project$View$userConfig(model),
+		model.users);
 };
 var _user$project$View$view = function (model) {
 	return A2(

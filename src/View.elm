@@ -79,15 +79,25 @@ view model =
 
 users : Model -> Html Msg
 users model =
-  case model.users of
-    NotAsked ->
-      text "Starter"
+  RemoteData.view ( userConfig model ) model.users
 
-    Loading ->
-      text "Henter"
 
-    Failure err ->
-      text ("Error: " ++ toString err)
 
-    Success x ->
-      Table.view config model.tableState x
+userConfig : Model -> RemoteData.Config Msg e (List User)
+userConfig model =
+  RemoteData.Config
+    { success  = success model
+    , notAsked = text "Starter"
+    , loading = text "Henter"
+    , failure = failure
+    }
+
+
+success : Model -> List User -> Html Msg
+success model x =
+  Table.view config model.tableState x
+
+
+failure : e -> Html Msg
+failure err =
+  text ("Error: " ++ toString err)
