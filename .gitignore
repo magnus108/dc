@@ -1,3 +1,4 @@
 # Dotfiles
 .composer
 .drush
+.bash_history
