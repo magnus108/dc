@@ -1,0 +1,60 @@
+var _user$project$RemoteData$view = F2(
+	function (_p0, remoteData) {
+		var _p1 = _p0;
+		var _p2 = remoteData;
+		switch (_p2.ctor) {
+			case 'NotAsked':
+				return _p1._0.notAsked;
+			case 'Loading':
+				return _p1._0.loading;
+			case 'Failure':
+				return _p1._0.failure(_p2._0);
+			default:
+				return _p1._0.success(_p2._0);
+		}
+	});
+var _user$project$RemoteData$Success = function (a) {
+	return {ctor: 'Success', _0: a};
+};
+var _user$project$RemoteData$Failure = function (a) {
+	return {ctor: 'Failure', _0: a};
+};
+var _user$project$RemoteData$fromResult = function (result) {
+	var _p3 = result;
+	if (_p3.ctor === 'Err') {
+		return _user$project$RemoteData$Failure(_p3._0);
+	} else {
+		return _user$project$RemoteData$Success(_p3._0);
+	}
+};
+var _user$project$RemoteData$sendRequest = _elm_lang$http$Http$send(_user$project$RemoteData$fromResult);
+var _user$project$RemoteData$Loading = {ctor: 'Loading'};
+var _user$project$RemoteData$NotAsked = {ctor: 'NotAsked'};
+var _user$project$RemoteData$update = F2(
+	function (f, remoteData) {
+		var _p4 = remoteData;
+		switch (_p4.ctor) {
+			case 'Success':
+				var _p5 = f(_p4._0);
+				var first = _p5._0;
+				var second = _p5._1;
+				return {
+					ctor: '_Tuple2',
+					_0: _user$project$RemoteData$Success(first),
+					_1: second
+				};
+			case 'NotAsked':
+				return {ctor: '_Tuple2', _0: _user$project$RemoteData$NotAsked, _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Loading':
+				return {ctor: '_Tuple2', _0: _user$project$RemoteData$Loading, _1: _elm_lang$core$Platform_Cmd$none};
+			default:
+				return {
+					ctor: '_Tuple2',
+					_0: _user$project$RemoteData$Failure(_p4._0),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+		}
+	});
+var _user$project$RemoteData$Config = function (a) {
+	return {ctor: 'Config', _0: a};
+};

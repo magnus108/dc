@@ -1,0 +1,104 @@
+var _user$project$Bootstrap$toText = function (_p0) {
+	return _elm_lang$core$List$singleton(
+		_elm_lang$html$Html$text(_p0));
+};
+var _user$project$Bootstrap$mdImage = function (x) {
+	return A2(
+		_elm_lang$html$Html$img,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$src(x),
+			_1: {ctor: '[]'}
+		},
+		{ctor: '[]'});
+};
+var _user$project$Bootstrap$_p1 = _rtfeldman$elm_css_helpers$Html_CssHelpers$withNamespace(_user$project$MyCss$name);
+var _user$project$Bootstrap$id = _user$project$Bootstrap$_p1.id;
+var _user$project$Bootstrap$class = _user$project$Bootstrap$_p1.$class;
+var _user$project$Bootstrap$classList = _user$project$Bootstrap$_p1.classList;
+var _user$project$Bootstrap$mdColumn = _elm_lang$html$Html$div(
+	{
+		ctor: '::',
+		_0: _user$project$Bootstrap$class(
+			{
+				ctor: '::',
+				_0: _user$project$MyCss$Column,
+				_1: {
+					ctor: '::',
+					_0: _user$project$MyCss$Flex,
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Bootstrap$mdContent = _elm_lang$html$Html$div(
+	{
+		ctor: '::',
+		_0: _user$project$Bootstrap$class(
+			{
+				ctor: '::',
+				_0: _user$project$MyCss$MdContent,
+				_1: {ctor: '[]'}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Bootstrap$mdRow = _elm_lang$html$Html$div(
+	{
+		ctor: '::',
+		_0: _user$project$Bootstrap$class(
+			{
+				ctor: '::',
+				_0: _user$project$MyCss$Row,
+				_1: {
+					ctor: '::',
+					_0: _user$project$MyCss$Flex,
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Bootstrap$mdTitle = function (_p2) {
+	return A2(
+		_elm_lang$html$Html$h1,
+		{
+			ctor: '::',
+			_0: _user$project$Bootstrap$class(
+				{
+					ctor: '::',
+					_0: _user$project$MyCss$Title,
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		},
+		_user$project$Bootstrap$toText(_p2));
+};
+var _user$project$Bootstrap$mdMarkdown = _evancz$elm_markdown$Markdown$toHtml(
+	{
+		ctor: '::',
+		_0: _user$project$Bootstrap$class(
+			{
+				ctor: '::',
+				_0: _user$project$MyCss$Markdown,
+				_1: {ctor: '[]'}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Bootstrap$mdBackgroundImage = function (x) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Bootstrap$class(
+				{
+					ctor: '::',
+					_0: _user$project$MyCss$BackgroundImage,
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _user$project$Bootstrap$mdImage(x),
+			_1: {ctor: '[]'}
+		});
+};

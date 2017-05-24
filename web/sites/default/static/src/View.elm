@@ -27,5 +27,5 @@ page model =
 
     Failure err -> text ("Error: " ++ toString err)
 
-    Success page ->
-      Page.View.page page |> Html.map PageMsg
+    Success x ->
+      Page.View.page x |> Html.map PageMsg

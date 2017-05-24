@@ -1,0 +1,5 @@
+var _user$project$User_Update$update = F2(
+	function (msg, user) {
+		var _p0 = msg;
+		return {ctor: '_Tuple2', _0: user, _1: _elm_lang$core$Platform_Cmd$none};
+	});

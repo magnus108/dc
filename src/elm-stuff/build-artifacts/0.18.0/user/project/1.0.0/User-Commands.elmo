@@ -1,0 +1,5 @@
+var _user$project$User_Commands$userDecoder = A3(
+	_elm_lang$core$Json_Decode$map2,
+	_user$project$User_Models$User,
+	A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string),
+	A2(_elm_lang$core$Json_Decode$field, 'mail', _elm_lang$core$Json_Decode$string));

@@ -1,0 +1,15 @@
+var _user$project$Colors$dividerColor = _rtfeldman$elm_css$Css$hex('bdbdbd');
+var _user$project$Colors$secondaryTextColor = _rtfeldman$elm_css$Css$hex('757575');
+var _user$project$Colors$primaryTextColor = _rtfeldman$elm_css$Css$hex('212121');
+var _user$project$Colors$primaryIconColor = _rtfeldman$elm_css$Css$hex('ffffff');
+var _user$project$Colors$primaryAccentColor = _rtfeldman$elm_css$Css$hex('ff4081');
+var _user$project$Colors$primaryLightColor = _rtfeldman$elm_css$Css$hex('d1c4e9');
+var _user$project$Colors$primaryColor = _rtfeldman$elm_css$Css$hex('673ab7');
+var _user$project$Colors$primaryDarkColor = _rtfeldman$elm_css$Css$hex('512da8');
+var _user$project$Colors$primaryBoxShadow = A5(
+	_rtfeldman$elm_css$Css$boxShadow5,
+	_rtfeldman$elm_css$Css$zero,
+	_rtfeldman$elm_css$Css$px(2),
+	_rtfeldman$elm_css$Css$px(5),
+	_rtfeldman$elm_css$Css$zero,
+	A4(_rtfeldman$elm_css$Css$rgba, 0, 0, 0, 0.26));

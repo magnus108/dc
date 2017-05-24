@@ -1,0 +1,123 @@
+var _user$project$View$failure = function (err) {
+	return _elm_lang$html$Html$text(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			'Error: ',
+			_elm_lang$core$Basics$toString(err)));
+};
+var _user$project$View$simpleRowAttrs = function (_p0) {
+	return {ctor: '[]'};
+};
+var _user$project$View$simpleTheadHelp = function (_p1) {
+	var _p2 = _p1;
+	var _p4 = _p2._0;
+	var content = function () {
+		var _p3 = _p2._1;
+		switch (_p3.ctor) {
+			case 'Unsortable':
+				return {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(_p4),
+					_1: {ctor: '[]'}
+				};
+			case 'Sortable':
+				return {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(_p4),
+					_1: {ctor: '[]'}
+				};
+			default:
+				if (_p3._0.ctor === 'Nothing') {
+					return {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p4),
+						_1: {ctor: '[]'}
+					};
+				} else {
+					return {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(_p4),
+						_1: {ctor: '[]'}
+					};
+				}
+		}
+	}();
+	return A2(
+		_elm_lang$html$Html$th,
+		{
+			ctor: '::',
+			_0: _p2._2,
+			_1: {ctor: '[]'}
+		},
+		content);
+};
+var _user$project$View$simpleThead = function (headers) {
+	return A2(
+		_user$project$Table$HtmlDetails,
+		{ctor: '[]'},
+		A2(_elm_lang$core$List$map, _user$project$View$simpleTheadHelp, headers));
+};
+var _user$project$View$customizations = {
+	tableAttrs: {ctor: '[]'},
+	caption: _elm_lang$core$Maybe$Nothing,
+	thead: _user$project$View$simpleThead,
+	tfoot: _elm_lang$core$Maybe$Nothing,
+	tbodyAttrs: {ctor: '[]'},
+	rowAttrs: _user$project$View$simpleRowAttrs
+};
+var _user$project$View$config = _user$project$Table$customConfig(
+	{
+		toId: function (_) {
+			return _.name;
+		},
+		toMsg: _user$project$Messages$SetTableState,
+		columns: {
+			ctor: '::',
+			_0: A2(
+				_user$project$Table$stringColumn,
+				'Name',
+				function (_) {
+					return _.name;
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_user$project$Table$stringColumn,
+					'Mail',
+					function (_) {
+						return _.mail;
+					}),
+				_1: {ctor: '[]'}
+			}
+		},
+		customizations: _user$project$View$customizations
+	});
+var _user$project$View$success = F2(
+	function (model, x) {
+		return A3(_user$project$Table$view, _user$project$View$config, model.tableState, x);
+	});
+var _user$project$View$userConfig = function (model) {
+	return _user$project$RemoteData$Config(
+		{
+			success: _user$project$View$success(model),
+			notAsked: _elm_lang$html$Html$text('Starter'),
+			loading: _elm_lang$html$Html$text('Henter'),
+			failure: _user$project$View$failure
+		});
+};
+var _user$project$View$users = function (model) {
+	return A2(
+		_user$project$RemoteData$view,
+		_user$project$View$userConfig(model),
+		model.users);
+};
+var _user$project$View$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _user$project$View$users(model),
+			_1: {ctor: '[]'}
+		});
+};

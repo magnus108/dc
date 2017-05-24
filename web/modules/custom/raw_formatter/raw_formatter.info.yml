@@ -1,0 +1,13 @@
+name: Raw formatter
+type: module
+description: This module will give you raw field formatter for the fields. And this will help you to use it in Services, specially in REST EXPORT views.
+# core: 8.x
+package: Services
+dependencies:
+  - field
+  - metatag
+# Information added by Drupal.org packaging script on 2015-12-08
+version: '8.x-1.1'
+core: '8.x'
+project: 'raw_formatter'
+datestamp: 1449581040

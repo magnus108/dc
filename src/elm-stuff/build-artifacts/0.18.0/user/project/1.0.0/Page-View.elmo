@@ -1,0 +1,16 @@
+var _user$project$Page_View$page = function (x) {
+	return _user$project$Bootstrap$mdContent(
+		{
+			ctor: '::',
+			_0: _user$project$Bootstrap$mdTitle(x.title),
+			_1: {
+				ctor: '::',
+				_0: _user$project$Bootstrap$mdMarkdown(x.body),
+				_1: {
+					ctor: '::',
+					_0: _user$project$Bootstrap$mdBackgroundImage(x.field_image),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};

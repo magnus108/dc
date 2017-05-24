@@ -1,0 +1,9 @@
+var _user$project$Messages$SetTableState = function (a) {
+	return {ctor: 'SetTableState', _0: a};
+};
+var _user$project$Messages$UserMsg = function (a) {
+	return {ctor: 'UserMsg', _0: a};
+};
+var _user$project$Messages$OnFetchUsers = function (a) {
+	return {ctor: 'OnFetchUsers', _0: a};
+};
