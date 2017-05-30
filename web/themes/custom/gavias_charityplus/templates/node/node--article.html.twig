@@ -14,6 +14,8 @@
 <!-- Start Display article for teaser page -->
 {% if teaser == true %} 
   <div class="post-block">
+    <p>lol</p>
+    {{ attach_library('library/lol') }}
     <div class="post-image">
       {% if post_format == 'video' or post_format == 'audio' and gva_iframe %}
         {{ gva_iframe|raw }}
