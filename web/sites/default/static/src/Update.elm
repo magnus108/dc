@@ -8,13 +8,15 @@ import Models exposing (Model)
 import Messages exposing (Msg(..))
 
 import Page.Update as PU
+import Page.Messages as PM
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
     OnFetchPage response ->
-      ( { model | page = response }, Cmd.none )
+      { model | page = response }
+        |> update ( PageMsg PM.Port ) -- fix at somepoint, this is sideeffect
 
     PageMsg subMsg ->
       let
