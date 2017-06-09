@@ -1,5 +1,18 @@
+var _user$project$Page_Update$meta = _elm_lang$core$Native_Platform.outgoingPort(
+	'meta',
+	function (v) {
+		return v;
+	});
 var _user$project$Page_Update$update = F2(
 	function (msg, page) {
 		var _p0 = msg;
-		return {ctor: '_Tuple2', _0: page, _1: _elm_lang$core$Platform_Cmd$none};
+		if (_p0.ctor === 'NoOp') {
+			return {ctor: '_Tuple2', _0: page, _1: _elm_lang$core$Platform_Cmd$none};
+		} else {
+			return {
+				ctor: '_Tuple2',
+				_0: page,
+				_1: _user$project$Page_Update$meta(page.field_meta_tags)
+			};
+		}
 	});

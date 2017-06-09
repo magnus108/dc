@@ -2,3 +2,4 @@
 .composer
 .drush
 .bash_history
+web/sites/default/settings.local.php

@@ -1,4 +1,4 @@
-var _user$project$Page_Models$Page = F3(
-	function (a, b, c) {
-		return {title: a, body: b, field_image: c};
+var _user$project$Page_Models$Page = F4(
+	function (a, b, c, d) {
+		return {title: a, body: b, field_image: c, field_meta_tags: d};
 	});

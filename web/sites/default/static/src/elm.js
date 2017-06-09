@@ -14904,11 +14904,12 @@ var _user$project$RemoteData$update = F2(
 		}
 	});
 
+var _user$project$Page_Messages$Port = {ctor: 'Port'};
 var _user$project$Page_Messages$NoOp = {ctor: 'NoOp'};
 
-var _user$project$Page_Models$Page = F3(
-	function (a, b, c) {
-		return {title: a, body: b, field_image: c};
+var _user$project$Page_Models$Page = F4(
+	function (a, b, c, d) {
+		return {title: a, body: b, field_image: c, field_meta_tags: d};
 	});
 
 var _user$project$Messages$PageMsg = function (a) {
@@ -14918,12 +14919,13 @@ var _user$project$Messages$OnFetchPage = function (a) {
 	return {ctor: 'OnFetchPage', _0: a};
 };
 
-var _user$project$Page_Commands$pageDecoder = A4(
-	_elm_lang$core$Json_Decode$map3,
+var _user$project$Page_Commands$pageDecoder = A5(
+	_elm_lang$core$Json_Decode$map4,
 	_user$project$Page_Models$Page,
 	A2(_elm_lang$core$Json_Decode$field, 'title', _elm_lang$core$Json_Decode$string),
 	A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string),
-	A2(_elm_lang$core$Json_Decode$field, 'field_image', _elm_lang$core$Json_Decode$string));
+	A2(_elm_lang$core$Json_Decode$field, 'field_image', _elm_lang$core$Json_Decode$string),
+	A2(_elm_lang$core$Json_Decode$field, 'field_meta_tags', _elm_lang$core$Json_Decode$string));
 
 var _user$project$Commands$fetchPageUrl = 'http://localhost:8080/web/api/pages/16';
 var _user$project$Commands$fetchPage = A2(
@@ -14987,40 +14989,56 @@ var _user$project$View$view = function (model) {
 		});
 };
 
+var _user$project$Page_Update$meta = _elm_lang$core$Native_Platform.outgoingPort(
+	'meta',
+	function (v) {
+		return v;
+	});
 var _user$project$Page_Update$update = F2(
 	function (msg, page) {
 		var _p0 = msg;
-		return {ctor: '_Tuple2', _0: page, _1: _elm_lang$core$Platform_Cmd$none};
+		if (_p0.ctor === 'NoOp') {
+			return {ctor: '_Tuple2', _0: page, _1: _elm_lang$core$Platform_Cmd$none};
+		} else {
+			return {
+				ctor: '_Tuple2',
+				_0: page,
+				_1: _user$project$Page_Update$meta(page.field_meta_tags)
+			};
+		}
 	});
 
 var _user$project$Update$update = F2(
 	function (msg, model) {
-		var _p0 = msg;
-		if (_p0.ctor === 'OnFetchPage') {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
+		update:
+		while (true) {
+			var _p0 = msg;
+			if (_p0.ctor === 'OnFetchPage') {
+				var _v1 = _user$project$Messages$PageMsg(_user$project$Page_Messages$Port),
+					_v2 = _elm_lang$core$Native_Utils.update(
 					model,
-					{page: _p0._0}),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
-		} else {
-			var _p1 = A2(
-				_user$project$RemoteData$update,
-				_user$project$Page_Update$update(_p0._0),
-				model.page);
-			var newPage = _p1._0;
-			var cmds = _p1._1;
-			return A2(
-				_elm_lang$core$Platform_Cmd_ops['!'],
-				_elm_lang$core$Native_Utils.update(
-					model,
-					{page: newPage}),
-				{
-					ctor: '::',
-					_0: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Messages$PageMsg, cmds),
-					_1: {ctor: '[]'}
-				});
+					{page: _p0._0});
+				msg = _v1;
+				model = _v2;
+				continue update;
+			} else {
+				var _p1 = A2(
+					_user$project$RemoteData$update,
+					_user$project$Page_Update$update(_p0._0),
+					model.page);
+				var newPage = _p1._0;
+				var cmds = _p1._1;
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					_elm_lang$core$Native_Utils.update(
+						model,
+						{page: newPage}),
+					{
+						ctor: '::',
+						_0: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Messages$PageMsg, cmds),
+						_1: {ctor: '[]'}
+					});
+			}
 		}
 	});
 
