@@ -41,6 +41,10 @@ global-styling:
     - core/drupal
     - core/drupalSettings
 
+taxonomy_term:
+  js:
+    src/script.js: {}
+
 gavias_charityplus.skin.default:
   version: VERSION
   css:
